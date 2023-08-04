@@ -43,5 +43,60 @@ namespace Pharmacy_Management_System
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //this.Close();
+
+            // Show the DashboardForm
+            Dashboard dashboardForm = new Dashboard();
+            dashboardForm.Show();
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //this.Close();
+
+            // Show the DashboardForm
+            AddUser adduserForm = new AddUser();
+            adduserForm.Show();
+        }
+
+        private void gunaButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //this.Close();
+
+            // Show the DashboardForm
+            ViewUser viewuserForm = new ViewUser();
+            viewuserForm.Show();
+        }
     }
 }

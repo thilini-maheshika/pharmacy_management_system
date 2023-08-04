@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Management_System
 {
-    public partial class AdminUC : UserControl
+    public partial class Pharmacist : Form
     {
-        public AdminUC()
+        public Pharmacist()
         {
             InitializeComponent();
         }

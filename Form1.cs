@@ -12,6 +12,10 @@ namespace Pharmacy_Management_System
 {
     public partial class Form1 : Form
     {
+
+        function fn = new function();
+        String query;
+
         public Form1()
         {
             InitializeComponent();
@@ -54,15 +58,45 @@ namespace Pharmacy_Management_System
 
         private void gunaButton2_Click(object sender, EventArgs e)
         {
-            if(txtusername.Text == "admin" && txtpassword.Text == "12345")
+
+            query = "select * from users";
+            DataSet ds = fn.getData(query);
+
+            if (ds.Tables[0].Rows.Count == 0)
             {
-               Adminstrator am = new Adminstrator();
-                am.Show();
-                this.Hide();
+                if(txtusername.Text == "root" && txtpassword.Text == "root")
+                {
+                    Adminstrator admin = new Adminstrator();
+                    admin.Show();
+                    this.Hide();
+                }
             }
             else
             {
-                MessageBox.Show("Username or Password is wrong!","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                query = "select * from users where username = '" + txtusername.Text + "' and pass = '" + txtpassword.Text + "'";
+                ds = fn.getData(query);
+
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    String role = ds.Tables[0].Rows[0][1].ToString();
+                    if(role == "Adminstrator")
+                    {
+                        Adminstrator admin = new Adminstrator();
+                        admin.Show();
+                        this.Hide();
+
+                    }else if (role == "Pharmacist")
+                    {
+                        Pharmacist pharm = new Pharmacist();
+                        pharm.Show();
+                        this.Hide();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
