@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace Pharmacy_Management_System
 {
     public partial class Adminstrator : Form
     {
+        function fn = new function();
+        String query;
+
         public Adminstrator()
         {
             InitializeComponent();
+        }
+
+        private string loggedInUsername;
+
+        public Adminstrator(string username)
+        {
+            InitializeComponent();
+            loggedInUsername = username;
+            lblLoggedInUser.Text = loggedInUsername;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -29,7 +42,11 @@ namespace Pharmacy_Management_System
 
         private void gunaButton4_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            // Show the Profile form and pass the logged-in username
+            Profile profileForm = new Profile(loggedInUsername);
+            profileForm.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -75,7 +92,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Dashboard dashboardForm = new Dashboard();
+            Dashboard dashboardForm = new Dashboard(lblLoggedInUser.Text);
             dashboardForm.Show();
         }
 
@@ -85,7 +102,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            AddUser adduserForm = new AddUser();
+            AddUser adduserForm = new AddUser(lblLoggedInUser.Text);
             adduserForm.Show();
         }
 
@@ -95,7 +112,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            ViewUser viewuserForm = new ViewUser();
+            ViewUser viewuserForm = new ViewUser(lblLoggedInUser.Text);
             viewuserForm.Show();
         }
     }

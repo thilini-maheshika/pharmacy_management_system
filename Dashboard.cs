@@ -22,6 +22,12 @@ namespace Pharmacy_Management_System
             InitializeComponent();
         }
 
+        public Dashboard(string username)
+        {
+            InitializeComponent();
+            userName.Text = username;
+        }
+
         private void btnexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -44,7 +50,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Dashboard dashboardForm = new Dashboard();
+            Dashboard dashboardForm = new Dashboard(userName.Text);
             dashboardForm.Show();
         }
 
@@ -54,7 +60,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            AddUser adduserForm = new AddUser();
+            AddUser adduserForm = new AddUser(userName.Text);
             adduserForm.Show();
         }
 
@@ -64,7 +70,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            ViewUser viewuserForm = new ViewUser();
+            ViewUser viewuserForm = new ViewUser(userName.Text);
             viewuserForm.Show();
         }
 
@@ -74,7 +80,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Adminstrator ad = new Adminstrator();
+            Adminstrator ad = new Adminstrator(userName.Text);
             ad.Show();
         }
 
@@ -84,7 +90,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Profile pro = new Profile();
+            Profile pro = new Profile(userName.Text);
             pro.Show();
         }
 

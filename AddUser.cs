@@ -21,6 +21,12 @@ namespace Pharmacy_Management_System
             InitializeComponent();
         }
 
+        public AddUser(string username)
+        {
+            InitializeComponent();
+            userlabel.Text = username;
+        }
+
         private void btnexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -32,7 +38,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Adminstrator ad = new Adminstrator();
+            Adminstrator ad = new Adminstrator(userlabel.Text);
             ad.Show();
         }
 
@@ -42,7 +48,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Dashboard dashboardForm = new Dashboard();
+            Dashboard dashboardForm = new Dashboard(userlabel.Text);
             dashboardForm.Show();
         }
 
@@ -52,7 +58,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            AddUser adduserForm = new AddUser();
+            AddUser adduserForm = new AddUser(userlabel.Text);
             adduserForm.Show();
         }
 
@@ -62,7 +68,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            ViewUser viewuserForm = new ViewUser();
+            ViewUser viewuserForm = new ViewUser(userlabel.Text);
             viewuserForm.Show();
         }
 
@@ -72,7 +78,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Profile pro = new Profile();
+            Profile pro = new Profile(userlabel.Text);
             pro.Show();
         }
 
@@ -147,7 +153,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Adminstrator ad = new Adminstrator();
+            Adminstrator ad = new Adminstrator(userlabel.Text);
             ad.Show();
         }
 
@@ -156,6 +162,11 @@ namespace Pharmacy_Management_System
             Form1 loginform = new Form1();
             loginform.Show();
             this.Close();
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+            txtpassword.PasswordChar = '*';
         }
     }
 }

@@ -66,7 +66,7 @@ namespace Pharmacy_Management_System
             {
                 if(txtusername.Text == "root" && txtpassword.Text == "root")
                 {
-                    Adminstrator admin = new Adminstrator();
+                    Adminstrator admin = new Adminstrator("root");
                     admin.Show();
                     this.Hide();
                 }
@@ -79,9 +79,10 @@ namespace Pharmacy_Management_System
                 if (ds.Tables[0].Rows.Count != 0)
                 {
                     String role = ds.Tables[0].Rows[0][1].ToString();
-                    if(role == "Adminstrator")
+                    String username = ds.Tables[0].Rows[0][2].ToString();
+                    if (role == "Adminstrator")
                     {
-                        Adminstrator admin = new Adminstrator();
+                        Adminstrator admin = new Adminstrator(username);
                         admin.Show();
                         this.Hide();
 

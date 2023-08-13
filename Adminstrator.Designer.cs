@@ -40,7 +40,7 @@
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblLoggedInUser = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnexit = new Guna.UI.WinForms.GunaButton();
@@ -228,7 +228,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.lblLoggedInUser);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnexit);
@@ -243,20 +243,19 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label4
+            // lblLoggedInUser
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(695, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 19);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Administrator";
+            this.lblLoggedInUser.AutoSize = true;
+            this.lblLoggedInUser.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoggedInUser.Location = new System.Drawing.Point(695, 133);
+            this.lblLoggedInUser.Name = "lblLoggedInUser";
+            this.lblLoggedInUser.Size = new System.Drawing.Size(0, 19);
+            this.lblLoggedInUser.TabIndex = 10;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(698, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(699, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -339,6 +338,6 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaButton btnexit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblLoggedInUser;
     }
 }

@@ -42,13 +42,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnDelete = new Guna.UI.WinForms.GunaButton();
-            this.btnload = new System.Windows.Forms.PictureBox();
             this.txtusername = new Guna.UI.WinForms.GunaTextBox();
+            this.userlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnload)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -221,13 +220,14 @@
             this.label1.Size = new System.Drawing.Size(115, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "View User";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1310, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1326, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(26, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -252,6 +252,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(862, 391);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnDelete
             // 
@@ -268,7 +269,7 @@
             this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
             this.btnDelete.Location = new System.Drawing.Point(1135, 622);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.DarkGray;
             this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnDelete.OnHoverForeColor = System.Drawing.Color.White;
             this.btnDelete.OnHoverImage = null;
@@ -279,16 +280,6 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDelete.Click += new System.EventHandler(this.gunaButton1_Click);
-            // 
-            // btnload
-            // 
-            this.btnload.Image = ((System.Drawing.Image)(resources.GetObject("btnload.Image")));
-            this.btnload.Location = new System.Drawing.Point(523, 32);
-            this.btnload.Name = "btnload";
-            this.btnload.Size = new System.Drawing.Size(30, 29);
-            this.btnload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnload.TabIndex = 9;
-            this.btnload.TabStop = false;
             // 
             // txtusername
             // 
@@ -309,14 +300,24 @@
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
+            // userlabel
+            // 
+            this.userlabel.AutoSize = true;
+            this.userlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userlabel.Location = new System.Drawing.Point(1203, 19);
+            this.userlabel.Name = "userlabel";
+            this.userlabel.Size = new System.Drawing.Size(60, 20);
+            this.userlabel.TabIndex = 29;
+            this.userlabel.Text = "label11";
+            // 
             // ViewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1364, 721);
+            this.Controls.Add(this.userlabel);
             this.Controls.Add(this.txtusername);
-            this.Controls.Add(this.btnload);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -333,7 +334,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnload)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,7 +354,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI.WinForms.GunaButton btnDelete;
-        private System.Windows.Forms.PictureBox btnload;
         private Guna.UI.WinForms.GunaTextBox txtusername;
+        private System.Windows.Forms.Label userlabel;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,34 @@ namespace Pharmacy_Management_System
 {
     public partial class Profile : Form
     {
+        function fn = new function();
+        String query;
+
         public Profile()
         {
             InitializeComponent();
+        }
+
+        public Profile(string username)
+        {
+            InitializeComponent();
+            labelUsername.Text = username;
+            setProfile();
+        }
+
+        public void setProfile()
+        {
+            query = "select * from users where username = '" + labelUsername.Text + "'";
+            DataSet ds = fn.getData(query);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                txtuserrole.Text = ds.Tables[0].Rows[0][1].ToString();
+                txtname.Text = ds.Tables[0].Rows[0][2].ToString();
+                txtdob.Text = ds.Tables[0].Rows[0][3].ToString();
+                txtmobile.Text = ds.Tables[0].Rows[0][4].ToString();
+                txtemail.Text = ds.Tables[0].Rows[0][5].ToString();
+                txtpassword.Text = ds.Tables[0].Rows[0][7].ToString();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,7 +54,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Adminstrator ad = new Adminstrator();
+            Adminstrator ad = new Adminstrator(labelUsername.Text);
             ad.Show();
         }
 
@@ -38,7 +64,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Dashboard dashboardForm = new Dashboard();
+            Dashboard dashboardForm = new Dashboard(labelUsername.Text);
             dashboardForm.Show();
         }
 
@@ -48,7 +74,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            AddUser adduserForm = new AddUser();
+            AddUser adduserForm = new AddUser(labelUsername.Text);
             adduserForm.Show();
         }
 
@@ -58,7 +84,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            ViewUser viewuserForm = new ViewUser();
+            ViewUser viewuserForm = new ViewUser(labelUsername.Text);
             viewuserForm.Show();
         }
 
@@ -68,7 +94,7 @@ namespace Pharmacy_Management_System
             //this.Close();
 
             // Show the DashboardForm
-            Profile pro = new Profile();
+            Profile pro = new Profile(labelUsername.Text);
             pro.Show();
         }
 
@@ -82,6 +108,35 @@ namespace Pharmacy_Management_System
             Form1 loginform = new Form1();
             loginform.Show();
             this.Close();
+        }
+
+        private void btnsignup_Click(object sender, EventArgs e)
+        {
+            String role = txtuserrole.Text;
+            String name = txtname.Text;
+            String dob = txtdob.Text;
+            String mobile = txtmobile.Text;
+            String email = txtemail.Text;
+            String username = labelUsername.Text;
+            String password = txtpassword.Text;
+
+            query = "update users set userRole = '"+role+"', name = '"+name+"' , dob = '"+dob+"' , mobile = '"+mobile+"' , email = '"+email+"' ,  pass = '"+password+"' where username = '"+username+"' ";
+            fn.setData(query, "Profile Updated Successfully!");
+        }
+
+        private void labelUsername_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ResetForm()
+        {
+            setProfile();
+        }
+
+        private void btnreset_Click(object sender, EventArgs e)
+        {
+            ResetForm();
         }
     }
 }

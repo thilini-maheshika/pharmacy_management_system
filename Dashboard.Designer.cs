@@ -42,18 +42,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.AdminLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.loadingbtn = new System.Windows.Forms.PictureBox();
-            this.AdminLabel = new System.Windows.Forms.Label();
             this.PharLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.userName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loadingbtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -264,6 +263,15 @@
             this.panel4.Size = new System.Drawing.Size(281, 220);
             this.panel4.TabIndex = 3;
             // 
+            // AdminLabel
+            // 
+            this.AdminLabel.AutoSize = true;
+            this.AdminLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminLabel.Location = new System.Drawing.Point(111, 128);
+            this.AdminLabel.Name = "AdminLabel";
+            this.AdminLabel.Size = new System.Drawing.Size(0, 20);
+            this.AdminLabel.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -284,6 +292,15 @@
             this.panel5.Size = new System.Drawing.Size(281, 220);
             this.panel5.TabIndex = 4;
             // 
+            // PharLabel
+            // 
+            this.PharLabel.AutoSize = true;
+            this.PharLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PharLabel.Location = new System.Drawing.Point(113, 114);
+            this.PharLabel.Name = "PharLabel";
+            this.PharLabel.Size = new System.Drawing.Size(0, 19);
+            this.PharLabel.TabIndex = 1;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -294,34 +311,16 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Total No of Pharmacist";
             // 
-            // loadingbtn
+            // userName
             // 
-            this.loadingbtn.Image = ((System.Drawing.Image)(resources.GetObject("loadingbtn.Image")));
-            this.loadingbtn.Location = new System.Drawing.Point(544, 22);
-            this.loadingbtn.Name = "loadingbtn";
-            this.loadingbtn.Size = new System.Drawing.Size(40, 40);
-            this.loadingbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.loadingbtn.TabIndex = 5;
-            this.loadingbtn.TabStop = false;
-            this.loadingbtn.Click += new System.EventHandler(this.loadingbtn_Click);
-            // 
-            // AdminLabel
-            // 
-            this.AdminLabel.AutoSize = true;
-            this.AdminLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminLabel.Location = new System.Drawing.Point(111, 128);
-            this.AdminLabel.Name = "AdminLabel";
-            this.AdminLabel.Size = new System.Drawing.Size(0, 20);
-            this.AdminLabel.TabIndex = 1;
-            // 
-            // PharLabel
-            // 
-            this.PharLabel.AutoSize = true;
-            this.PharLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PharLabel.Location = new System.Drawing.Point(113, 114);
-            this.PharLabel.Name = "PharLabel";
-            this.PharLabel.Size = new System.Drawing.Size(0, 19);
-            this.PharLabel.TabIndex = 1;
+            this.userName.AutoSize = true;
+            this.userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userName.ForeColor = System.Drawing.Color.Black;
+            this.userName.Location = new System.Drawing.Point(1189, 22);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(51, 20);
+            this.userName.TabIndex = 25;
+            this.userName.Text = "label4";
             // 
             // Dashboard
             // 
@@ -329,7 +328,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1364, 721);
-            this.Controls.Add(this.loadingbtn);
+            this.Controls.Add(this.userName);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox1);
@@ -348,7 +347,6 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loadingbtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,8 +370,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox loadingbtn;
         private System.Windows.Forms.Label AdminLabel;
         private System.Windows.Forms.Label PharLabel;
+        private System.Windows.Forms.Label userName;
     }
 }

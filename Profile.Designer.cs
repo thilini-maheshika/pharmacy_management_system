@@ -39,9 +39,26 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.txtmobile = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.txtdob = new System.Windows.Forms.DateTimePicker();
+            this.txtuserrole = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnreset = new Guna.UI.WinForms.GunaButton();
+            this.btnupdate = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -220,13 +237,206 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1310, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1324, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(522, 247);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(127, 130);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(522, 397);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(127, 18);
+            this.labelUsername.TabIndex = 5;
+            this.labelUsername.Text = "Username";
+            this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelUsername.Enter += new System.EventHandler(this.labelUsername_Enter);
+            // 
+            // txtmobile
+            // 
+            this.txtmobile.ForeColor = System.Drawing.Color.Black;
+            this.txtmobile.Location = new System.Drawing.Point(805, 359);
+            this.txtmobile.Name = "txtmobile";
+            this.txtmobile.Size = new System.Drawing.Size(340, 20);
+            this.txtmobile.TabIndex = 29;
+            // 
+            // txtname
+            // 
+            this.txtname.ForeColor = System.Drawing.Color.Black;
+            this.txtname.Location = new System.Drawing.Point(803, 207);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(340, 20);
+            this.txtname.TabIndex = 28;
+            // 
+            // txtdob
+            // 
+            this.txtdob.Location = new System.Drawing.Point(804, 284);
+            this.txtdob.Name = "txtdob";
+            this.txtdob.Size = new System.Drawing.Size(341, 20);
+            this.txtdob.TabIndex = 27;
+            // 
+            // txtuserrole
+            // 
+            this.txtuserrole.ForeColor = System.Drawing.Color.Black;
+            this.txtuserrole.FormattingEnabled = true;
+            this.txtuserrole.Items.AddRange(new object[] {
+            "Adminstrator",
+            "Pharmacist"});
+            this.txtuserrole.Location = new System.Drawing.Point(803, 126);
+            this.txtuserrole.Margin = new System.Windows.Forms.Padding(4);
+            this.txtuserrole.Name = "txtuserrole";
+            this.txtuserrole.Size = new System.Drawing.Size(340, 21);
+            this.txtuserrole.TabIndex = 26;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(802, 324);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 18);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Mobile No";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(801, 244);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 18);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Date of Birth";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(801, 169);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 18);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Name";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(801, 95);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 18);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "User Role";
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.ForeColor = System.Drawing.Color.Black;
+            this.txtpassword.Location = new System.Drawing.Point(804, 505);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.Size = new System.Drawing.Size(341, 20);
+            this.txtpassword.TabIndex = 33;
+            // 
+            // txtemail
+            // 
+            this.txtemail.ForeColor = System.Drawing.Color.Black;
+            this.txtemail.Location = new System.Drawing.Point(805, 427);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(340, 20);
+            this.txtemail.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(800, 471);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 18);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Password";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(802, 397);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 18);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Email Address";
+            // 
+            // btnreset
+            // 
+            this.btnreset.AnimationHoverSpeed = 0.07F;
+            this.btnreset.AnimationSpeed = 0.03F;
+            this.btnreset.BackColor = System.Drawing.Color.Transparent;
+            this.btnreset.BaseColor = System.Drawing.Color.Green;
+            this.btnreset.BorderColor = System.Drawing.Color.Black;
+            this.btnreset.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnreset.FocusedColor = System.Drawing.Color.Empty;
+            this.btnreset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreset.ForeColor = System.Drawing.Color.White;
+            this.btnreset.Image = null;
+            this.btnreset.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnreset.Location = new System.Drawing.Point(1029, 573);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnreset.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnreset.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnreset.OnHoverImage = null;
+            this.btnreset.OnPressedColor = System.Drawing.Color.Black;
+            this.btnreset.Radius = 19;
+            this.btnreset.Size = new System.Drawing.Size(160, 42);
+            this.btnreset.TabIndex = 35;
+            this.btnreset.Text = "Reset";
+            this.btnreset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
+            // 
+            // btnupdate
+            // 
+            this.btnupdate.AnimationHoverSpeed = 0.07F;
+            this.btnupdate.AnimationSpeed = 0.03F;
+            this.btnupdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnupdate.BaseColor = System.Drawing.Color.Green;
+            this.btnupdate.BorderColor = System.Drawing.Color.Black;
+            this.btnupdate.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnupdate.FocusedColor = System.Drawing.Color.Empty;
+            this.btnupdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.ForeColor = System.Drawing.Color.White;
+            this.btnupdate.Image = null;
+            this.btnupdate.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnupdate.Location = new System.Drawing.Point(803, 573);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnupdate.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnupdate.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnupdate.OnHoverImage = null;
+            this.btnupdate.OnPressedColor = System.Drawing.Color.Black;
+            this.btnupdate.Radius = 19;
+            this.btnupdate.Size = new System.Drawing.Size(160, 42);
+            this.btnupdate.TabIndex = 34;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnupdate.Click += new System.EventHandler(this.btnsignup_Click);
             // 
             // Profile
             // 
@@ -234,6 +444,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1364, 721);
+            this.Controls.Add(this.btnreset);
+            this.Controls.Add(this.btnupdate);
+            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtmobile);
+            this.Controls.Add(this.txtname);
+            this.Controls.Add(this.txtdob);
+            this.Controls.Add(this.txtuserrole);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelUsername);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -245,6 +471,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +489,21 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.TextBox txtmobile;
+        private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.DateTimePicker txtdob;
+        private System.Windows.Forms.ComboBox txtuserrole;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI.WinForms.GunaButton btnreset;
+        private Guna.UI.WinForms.GunaButton btnupdate;
     }
 }
