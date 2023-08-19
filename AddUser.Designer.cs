@@ -295,6 +295,7 @@
             this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "User Role";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -306,6 +307,7 @@
             this.label3.Size = new System.Drawing.Size(48, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -317,6 +319,7 @@
             this.label4.Size = new System.Drawing.Size(90, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Date of Birth";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label6
             // 
@@ -340,6 +343,7 @@
             this.label7.Size = new System.Drawing.Size(103, 18);
             this.label7.TabIndex = 8;
             this.label7.Text = "Email Address";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -351,6 +355,7 @@
             this.label8.Size = new System.Drawing.Size(77, 18);
             this.label8.TabIndex = 9;
             this.label8.Text = "Username";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtuserrole
             // 
@@ -384,6 +389,7 @@
             this.txtdob.Name = "txtdob";
             this.txtdob.Size = new System.Drawing.Size(341, 24);
             this.txtdob.TabIndex = 17;
+            this.txtdob.ValueChanged += new System.EventHandler(this.txtdob_ValueChanged);
             // 
             // btnsignup
             // 
@@ -446,6 +452,7 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(340, 24);
             this.txtname.TabIndex = 20;
+            this.txtname.TextChanged += new System.EventHandler(this.txtname_TextChanged);
             // 
             // txtmobile
             // 
@@ -454,6 +461,7 @@
             this.txtmobile.Name = "txtmobile";
             this.txtmobile.Size = new System.Drawing.Size(340, 24);
             this.txtmobile.TabIndex = 21;
+            this.txtmobile.TextChanged += new System.EventHandler(this.txtmobile_TextChanged);
             // 
             // txtemail
             // 
@@ -462,6 +470,7 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(321, 24);
             this.txtemail.TabIndex = 22;
+            this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
             // 
             // txtusername
             // 
@@ -501,6 +510,7 @@
             this.label10.Size = new System.Drawing.Size(246, 16);
             this.label10.TabIndex = 26;
             this.label10.Text = "*Check User Role Once Before  Sign Up";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox4
             // 

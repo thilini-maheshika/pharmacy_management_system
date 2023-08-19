@@ -110,6 +110,7 @@ namespace Pharmacy_Management_System
             try{
                 query = "insert into users (userRole ,name, dob, mobile,email,username,pass) values ('" + role + "','" + name + "','" + dob + "'," + mobile + ",'" + email + "','" + username + "','" + password + "' )";
                 fn.setData(query, "Sign Up Successfully");
+                clearAll();
             }
             catch(Exception)
             {
@@ -167,6 +168,56 @@ namespace Pharmacy_Management_System
         private void txtpassword_TextChanged(object sender, EventArgs e)
         {
             txtpassword.PasswordChar = '*';
+        }
+
+        private void txtemail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdob_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmobile_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

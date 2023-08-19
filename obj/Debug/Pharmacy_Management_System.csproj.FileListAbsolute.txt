@@ -34,3 +34,5 @@ D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Manageme
 D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.csproj.CopyComplete
 D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.exe
 D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.pdb
+D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.Pharmacist.resources
+D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.AddMedicine.resources

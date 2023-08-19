@@ -115,5 +115,10 @@ namespace Pharmacy_Management_System
             ViewUser viewuserForm = new ViewUser(lblLoggedInUser.Text);
             viewuserForm.Show();
         }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
