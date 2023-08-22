@@ -1,6 +1,6 @@
 ﻿namespace Pharmacy_Management_System
 {
-    partial class AddMedicine
+    partial class ModifyMedicine
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMedicine));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyMedicine));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btnLogOut = new Guna.UI.WinForms.GunaButton();
             this.gunaButton6 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
+            this.btnViewMedicine = new Guna.UI.WinForms.GunaButton();
             this.gunaButton8 = new Guna.UI.WinForms.GunaButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new Guna.UI.WinForms.GunaButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtExpDate = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtMediID = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.txtMediNumber = new System.Windows.Forms.TextBox();
             this.txtMediName = new System.Windows.Forms.TextBox();
             this.btnreset = new Guna.UI.WinForms.GunaButton();
-            this.btnAdd = new Guna.UI.WinForms.GunaButton();
+            this.btnUpdate = new Guna.UI.WinForms.GunaButton();
+            this.txtManuDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMediID = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtManuDate = new System.Windows.Forms.DateTimePicker();
-            this.txtExpDate = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnsearch = new Guna.UI.WinForms.GunaButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtaddqty = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,17 +72,15 @@
             this.panel1.Controls.Add(this.gunaButton1);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.gunaButton6);
-            this.panel1.Controls.Add(this.gunaButton7);
+            this.panel1.Controls.Add(this.btnViewMedicine);
             this.panel1.Controls.Add(this.gunaButton8);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(351, 722);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // gunaButton2
             // 
@@ -94,7 +95,7 @@
             this.gunaButton2.ForeColor = System.Drawing.Color.White;
             this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(77, 585);
+            this.gunaButton2.Location = new System.Drawing.Point(75, 581);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -102,9 +103,8 @@
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton2.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton2.TabIndex = 42;
+            this.gunaButton2.TabIndex = 51;
             this.gunaButton2.Text = "Sell Medicine";
-            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // gunaButton1
             // 
@@ -119,7 +119,7 @@
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(77, 518);
+            this.gunaButton1.Location = new System.Drawing.Point(75, 514);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -127,9 +127,8 @@
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton1.TabIndex = 41;
+            this.gunaButton1.TabIndex = 50;
             this.gunaButton1.Text = "Medicine Validity Check";
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // btnLogOut
             // 
@@ -144,7 +143,7 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLogOut.Location = new System.Drawing.Point(77, 651);
+            this.btnLogOut.Location = new System.Drawing.Point(75, 647);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogOut.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -152,9 +151,8 @@
             this.btnLogOut.OnHoverImage = null;
             this.btnLogOut.OnPressedColor = System.Drawing.Color.Black;
             this.btnLogOut.Size = new System.Drawing.Size(200, 51);
-            this.btnLogOut.TabIndex = 40;
+            this.btnLogOut.TabIndex = 49;
             this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // gunaButton6
             // 
@@ -169,7 +167,7 @@
             this.gunaButton6.ForeColor = System.Drawing.Color.White;
             this.gunaButton6.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton6.Image")));
             this.gunaButton6.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton6.Location = new System.Drawing.Point(77, 451);
+            this.gunaButton6.Location = new System.Drawing.Point(75, 447);
             this.gunaButton6.Name = "gunaButton6";
             this.gunaButton6.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gunaButton6.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -177,34 +175,34 @@
             this.gunaButton6.OnHoverImage = null;
             this.gunaButton6.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton6.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton6.TabIndex = 39;
+            this.gunaButton6.TabIndex = 48;
             this.gunaButton6.Text = "Modify Medicine";
             this.gunaButton6.Click += new System.EventHandler(this.gunaButton6_Click);
             // 
-            // gunaButton7
+            // btnViewMedicine
             // 
-            this.gunaButton7.AnimationHoverSpeed = 0.07F;
-            this.gunaButton7.AnimationSpeed = 0.03F;
-            this.gunaButton7.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaButton7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaButton7.BorderSize = 3;
-            this.gunaButton7.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton7.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton7.ForeColor = System.Drawing.Color.White;
-            this.gunaButton7.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton7.Image")));
-            this.gunaButton7.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton7.Location = new System.Drawing.Point(77, 383);
-            this.gunaButton7.Name = "gunaButton7";
-            this.gunaButton7.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaButton7.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton7.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton7.OnHoverImage = null;
-            this.gunaButton7.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton7.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton7.TabIndex = 38;
-            this.gunaButton7.Text = "View Medicine";
-            this.gunaButton7.Click += new System.EventHandler(this.gunaButton7_Click);
+            this.btnViewMedicine.AnimationHoverSpeed = 0.07F;
+            this.btnViewMedicine.AnimationSpeed = 0.03F;
+            this.btnViewMedicine.BaseColor = System.Drawing.Color.Transparent;
+            this.btnViewMedicine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnViewMedicine.BorderSize = 3;
+            this.btnViewMedicine.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnViewMedicine.FocusedColor = System.Drawing.Color.Empty;
+            this.btnViewMedicine.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewMedicine.ForeColor = System.Drawing.Color.White;
+            this.btnViewMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnViewMedicine.Image")));
+            this.btnViewMedicine.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnViewMedicine.Location = new System.Drawing.Point(75, 379);
+            this.btnViewMedicine.Name = "btnViewMedicine";
+            this.btnViewMedicine.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnViewMedicine.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnViewMedicine.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnViewMedicine.OnHoverImage = null;
+            this.btnViewMedicine.OnPressedColor = System.Drawing.Color.Black;
+            this.btnViewMedicine.Size = new System.Drawing.Size(200, 51);
+            this.btnViewMedicine.TabIndex = 47;
+            this.btnViewMedicine.Text = "View Medicine";
+            this.btnViewMedicine.Click += new System.EventHandler(this.btnViewMedicine_Click);
             // 
             // gunaButton8
             // 
@@ -219,7 +217,7 @@
             this.gunaButton8.ForeColor = System.Drawing.Color.White;
             this.gunaButton8.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton8.Image")));
             this.gunaButton8.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton8.Location = new System.Drawing.Point(77, 316);
+            this.gunaButton8.Location = new System.Drawing.Point(75, 312);
             this.gunaButton8.Name = "gunaButton8";
             this.gunaButton8.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gunaButton8.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -227,18 +225,18 @@
             this.gunaButton8.OnHoverImage = null;
             this.gunaButton8.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton8.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton8.TabIndex = 37;
+            this.gunaButton8.TabIndex = 46;
             this.gunaButton8.Text = "Add Medicine";
             this.gunaButton8.Click += new System.EventHandler(this.gunaButton8_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(90, 29);
+            this.pictureBox3.Location = new System.Drawing.Point(88, 25);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(147, 152);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabIndex = 43;
             this.pictureBox3.TabStop = false;
             // 
             // btnDashboard
@@ -254,7 +252,7 @@
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDashboard.Location = new System.Drawing.Point(77, 247);
+            this.btnDashboard.Location = new System.Drawing.Point(75, 243);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDashboard.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -262,7 +260,7 @@
             this.btnDashboard.OnHoverImage = null;
             this.btnDashboard.OnPressedColor = System.Drawing.Color.Black;
             this.btnDashboard.Size = new System.Drawing.Size(200, 51);
-            this.btnDashboard.TabIndex = 36;
+            this.btnDashboard.TabIndex = 45;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
@@ -271,64 +269,71 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(94, 198);
+            this.label5.Location = new System.Drawing.Point(92, 194);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 33);
-            this.label5.TabIndex = 35;
+            this.label5.TabIndex = 44;
             this.label5.Text = "Pharmacist";
             // 
-            // label1
+            // txtExpDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(402, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 29);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Add Medicine";
+            this.txtExpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtExpDate.Location = new System.Drawing.Point(932, 149);
+            this.txtExpDate.Name = "txtExpDate";
+            this.txtExpDate.Size = new System.Drawing.Size(341, 20);
+            this.txtExpDate.TabIndex = 64;
+            this.txtExpDate.Value = new System.DateTime(2023, 8, 18, 23, 10, 5, 0);
             // 
-            // pictureBox1
+            // label7
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1320, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(929, 109);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 18);
+            this.label7.TabIndex = 63;
+            this.label7.Text = "Expire Date";
+            // 
+            // txtMediID
+            // 
+            this.txtMediID.ForeColor = System.Drawing.Color.Black;
+            this.txtMediID.Location = new System.Drawing.Point(410, 140);
+            this.txtMediID.Name = "txtMediID";
+            this.txtMediID.Size = new System.Drawing.Size(340, 20);
+            this.txtMediID.TabIndex = 62;
             // 
             // txtPrice
             // 
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtPrice.Location = new System.Drawing.Point(930, 385);
+            this.txtPrice.Location = new System.Drawing.Point(933, 381);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(320, 20);
-            this.txtPrice.TabIndex = 42;
+            this.txtPrice.TabIndex = 61;
             // 
             // txtQty
             // 
             this.txtQty.ForeColor = System.Drawing.Color.Black;
-            this.txtQty.Location = new System.Drawing.Point(929, 265);
+            this.txtQty.Location = new System.Drawing.Point(932, 261);
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(321, 20);
-            this.txtQty.TabIndex = 41;
+            this.txtQty.TabIndex = 60;
             // 
             // txtMediNumber
             // 
             this.txtMediNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtMediNumber.Location = new System.Drawing.Point(407, 383);
+            this.txtMediNumber.Location = new System.Drawing.Point(410, 379);
             this.txtMediNumber.Name = "txtMediNumber";
             this.txtMediNumber.Size = new System.Drawing.Size(340, 20);
-            this.txtMediNumber.TabIndex = 39;
+            this.txtMediNumber.TabIndex = 59;
             // 
             // txtMediName
             // 
             this.txtMediName.ForeColor = System.Drawing.Color.Black;
-            this.txtMediName.Location = new System.Drawing.Point(407, 265);
+            this.txtMediName.Location = new System.Drawing.Point(410, 261);
             this.txtMediName.Name = "txtMediName";
             this.txtMediName.Size = new System.Drawing.Size(340, 20);
-            this.txtMediName.TabIndex = 38;
+            this.txtMediName.TabIndex = 58;
             // 
             // btnreset
             // 
@@ -343,7 +348,7 @@
             this.btnreset.ForeColor = System.Drawing.Color.White;
             this.btnreset.Image = null;
             this.btnreset.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnreset.Location = new System.Drawing.Point(1146, 522);
+            this.btnreset.Location = new System.Drawing.Point(1149, 518);
             this.btnreset.Name = "btnreset";
             this.btnreset.OnHoverBaseColor = System.Drawing.Color.DarkGray;
             this.btnreset.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -352,146 +357,191 @@
             this.btnreset.OnPressedColor = System.Drawing.Color.Black;
             this.btnreset.Radius = 19;
             this.btnreset.Size = new System.Drawing.Size(160, 42);
-            this.btnreset.TabIndex = 37;
+            this.btnreset.TabIndex = 57;
             this.btnreset.Text = "Reset";
             this.btnreset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
-            // btnAdd
+            // btnUpdate
             // 
-            this.btnAdd.AnimationHoverSpeed = 0.07F;
-            this.btnAdd.AnimationSpeed = 0.03F;
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BaseColor = System.Drawing.Color.Teal;
-            this.btnAdd.BorderColor = System.Drawing.Color.Black;
-            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAdd.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = null;
-            this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(920, 522);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAdd.OnHoverForeColor = System.Drawing.Color.LightGray;
-            this.btnAdd.OnHoverImage = null;
-            this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAdd.Radius = 19;
-            this.btnAdd.Size = new System.Drawing.Size(160, 42);
-            this.btnAdd.TabIndex = 36;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnUpdate.AnimationHoverSpeed = 0.07F;
+            this.btnUpdate.AnimationSpeed = 0.03F;
+            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.BaseColor = System.Drawing.Color.Teal;
+            this.btnUpdate.BorderColor = System.Drawing.Color.Black;
+            this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnUpdate.FocusedColor = System.Drawing.Color.Empty;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = null;
+            this.btnUpdate.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnUpdate.Location = new System.Drawing.Point(923, 518);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.OnHoverBaseColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnUpdate.OnHoverForeColor = System.Drawing.Color.LightGray;
+            this.btnUpdate.OnHoverImage = null;
+            this.btnUpdate.OnPressedColor = System.Drawing.Color.Black;
+            this.btnUpdate.Radius = 19;
+            this.btnUpdate.Size = new System.Drawing.Size(160, 42);
+            this.btnUpdate.TabIndex = 56;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txtManuDate
+            // 
+            this.txtManuDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtManuDate.Location = new System.Drawing.Point(411, 487);
+            this.txtManuDate.Name = "txtManuDate";
+            this.txtManuDate.Size = new System.Drawing.Size(341, 20);
+            this.txtManuDate.TabIndex = 55;
+            this.txtManuDate.Value = new System.DateTime(2023, 8, 18, 23, 10, 5, 0);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(926, 351);
+            this.label9.Location = new System.Drawing.Point(929, 347);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 18);
-            this.label9.TabIndex = 34;
+            this.label9.TabIndex = 54;
             this.label9.Text = "Price Per Unit";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(927, 233);
+            this.label8.Location = new System.Drawing.Point(930, 229);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 18);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Quantity";
+            this.label8.Size = new System.Drawing.Size(123, 18);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "Available Quantity";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(404, 348);
+            this.label6.Location = new System.Drawing.Point(407, 344);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 18);
-            this.label6.TabIndex = 30;
+            this.label6.TabIndex = 52;
             this.label6.Text = "Medicine Number";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(408, 447);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 18);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Manufacturing Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(405, 227);
+            this.label3.Location = new System.Drawing.Point(408, 223);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 18);
-            this.label3.TabIndex = 28;
+            this.label3.TabIndex = 50;
             this.label3.Text = "Medicine Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(405, 113);
+            this.label2.Location = new System.Drawing.Point(408, 109);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 18);
-            this.label2.TabIndex = 27;
+            this.label2.TabIndex = 49;
             this.label2.Text = "Medicine ID";
             // 
-            // txtMediID
+            // pictureBox1
             // 
-            this.txtMediID.ForeColor = System.Drawing.Color.Black;
-            this.txtMediID.Location = new System.Drawing.Point(407, 144);
-            this.txtMediID.Name = "txtMediID";
-            this.txtMediID.Size = new System.Drawing.Size(340, 20);
-            this.txtMediID.TabIndex = 44;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1320, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label4
+            // label1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(405, 451);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 18);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Manufacturing Date";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(405, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 29);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Modify Medicine";
             // 
-            // txtManuDate
+            // btnsearch
             // 
-            this.txtManuDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtManuDate.Location = new System.Drawing.Point(408, 491);
-            this.txtManuDate.Name = "txtManuDate";
-            this.txtManuDate.Size = new System.Drawing.Size(341, 20);
-            this.txtManuDate.TabIndex = 35;
-            this.txtManuDate.Value = new System.DateTime(2023, 8, 18, 23, 10, 5, 0);
+            this.btnsearch.AnimationHoverSpeed = 0.07F;
+            this.btnsearch.AnimationSpeed = 0.03F;
+            this.btnsearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnsearch.BaseColor = System.Drawing.Color.Teal;
+            this.btnsearch.BorderColor = System.Drawing.Color.Black;
+            this.btnsearch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnsearch.FocusedColor = System.Drawing.Color.Empty;
+            this.btnsearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsearch.ForeColor = System.Drawing.Color.White;
+            this.btnsearch.Image = ((System.Drawing.Image)(resources.GetObject("btnsearch.Image")));
+            this.btnsearch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnsearch.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnsearch.Location = new System.Drawing.Point(650, 179);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.OnHoverBaseColor = System.Drawing.Color.DarkGray;
+            this.btnsearch.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnsearch.OnHoverForeColor = System.Drawing.Color.LightGray;
+            this.btnsearch.OnHoverImage = null;
+            this.btnsearch.OnPressedColor = System.Drawing.Color.Black;
+            this.btnsearch.Radius = 16;
+            this.btnsearch.Size = new System.Drawing.Size(102, 30);
+            this.btnsearch.TabIndex = 65;
+            this.btnsearch.Text = "Search";
+            this.btnsearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
-            // txtExpDate
+            // label10
             // 
-            this.txtExpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtExpDate.Location = new System.Drawing.Point(929, 153);
-            this.txtExpDate.Name = "txtExpDate";
-            this.txtExpDate.Size = new System.Drawing.Size(341, 20);
-            this.txtExpDate.TabIndex = 46;
-            this.txtExpDate.Value = new System.DateTime(2023, 8, 18, 23, 10, 5, 0);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(1060, 296);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 18);
+            this.label10.TabIndex = 66;
+            this.label10.Text = "Add Quantity";
             // 
-            // label7
+            // txtaddqty
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(926, 113);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 18);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Expire Date";
+            this.txtaddqty.ForeColor = System.Drawing.Color.Black;
+            this.txtaddqty.Location = new System.Drawing.Point(1158, 296);
+            this.txtaddqty.Name = "txtaddqty";
+            this.txtaddqty.Size = new System.Drawing.Size(95, 20);
+            this.txtaddqty.TabIndex = 67;
+            this.txtaddqty.Text = "0";
+            this.txtaddqty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // AddMedicine
+            // ModifyMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1364, 721);
+            this.Controls.Add(this.txtaddqty);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.txtExpDate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtMediID);
@@ -500,7 +550,7 @@
             this.Controls.Add(this.txtMediNumber);
             this.Controls.Add(this.txtMediName);
             this.Controls.Add(this.btnreset);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtManuDate);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -512,9 +562,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddMedicine";
+            this.Name = "ModifyMedicine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddMedicine";
+            this.Text = "ModifyMedicine";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -531,28 +581,31 @@
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaButton btnLogOut;
         private Guna.UI.WinForms.GunaButton gunaButton6;
-        private Guna.UI.WinForms.GunaButton gunaButton7;
+        private Guna.UI.WinForms.GunaButton btnViewMedicine;
         private Guna.UI.WinForms.GunaButton gunaButton8;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI.WinForms.GunaButton btnDashboard;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker txtExpDate;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtMediID;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtQty;
         private System.Windows.Forms.TextBox txtMediNumber;
         private System.Windows.Forms.TextBox txtMediName;
         private Guna.UI.WinForms.GunaButton btnreset;
-        private Guna.UI.WinForms.GunaButton btnAdd;
+        private Guna.UI.WinForms.GunaButton btnUpdate;
+        private System.Windows.Forms.DateTimePicker txtManuDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMediID;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker txtManuDate;
-        private System.Windows.Forms.DateTimePicker txtExpDate;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI.WinForms.GunaButton btnsearch;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtaddqty;
     }
 }

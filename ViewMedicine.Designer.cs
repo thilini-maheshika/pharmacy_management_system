@@ -1,6 +1,6 @@
 ﻿namespace Pharmacy_Management_System
 {
-    partial class Pharmacist
+    partial class ViewMedicine
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pharmacist));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMedicine));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btnLogOut = new Guna.UI.WinForms.GunaButton();
             this.gunaButton6 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
+            this.btnViewMedicine = new Guna.UI.WinForms.GunaButton();
             this.gunaButton8 = new Guna.UI.WinForms.GunaButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new Guna.UI.WinForms.GunaButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnReload = new Guna.UI.WinForms.GunaButton();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.txtmedi = new Guna.UI.WinForms.GunaTextBox();
+            this.btnDelete = new Guna.UI.WinForms.GunaButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,15 +58,16 @@
             this.panel1.Controls.Add(this.gunaButton1);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.gunaButton6);
-            this.panel1.Controls.Add(this.gunaButton7);
+            this.panel1.Controls.Add(this.btnViewMedicine);
             this.panel1.Controls.Add(this.gunaButton8);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(351, 722);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // gunaButton2
             // 
@@ -93,7 +90,7 @@
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton2.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton2.TabIndex = 33;
+            this.gunaButton2.TabIndex = 42;
             this.gunaButton2.Text = "Sell Medicine";
             // 
             // gunaButton1
@@ -117,7 +114,7 @@
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton1.TabIndex = 32;
+            this.gunaButton1.TabIndex = 41;
             this.gunaButton1.Text = "Medicine Validity Check";
             // 
             // btnLogOut
@@ -141,9 +138,8 @@
             this.btnLogOut.OnHoverImage = null;
             this.btnLogOut.OnPressedColor = System.Drawing.Color.Black;
             this.btnLogOut.Size = new System.Drawing.Size(200, 51);
-            this.btnLogOut.TabIndex = 31;
+            this.btnLogOut.TabIndex = 40;
             this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // gunaButton6
             // 
@@ -166,34 +162,34 @@
             this.gunaButton6.OnHoverImage = null;
             this.gunaButton6.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton6.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton6.TabIndex = 30;
+            this.gunaButton6.TabIndex = 39;
             this.gunaButton6.Text = "Modify Medicine";
             this.gunaButton6.Click += new System.EventHandler(this.gunaButton6_Click);
             // 
-            // gunaButton7
+            // btnViewMedicine
             // 
-            this.gunaButton7.AnimationHoverSpeed = 0.07F;
-            this.gunaButton7.AnimationSpeed = 0.03F;
-            this.gunaButton7.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaButton7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaButton7.BorderSize = 3;
-            this.gunaButton7.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton7.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton7.ForeColor = System.Drawing.Color.White;
-            this.gunaButton7.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton7.Image")));
-            this.gunaButton7.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton7.Location = new System.Drawing.Point(77, 383);
-            this.gunaButton7.Name = "gunaButton7";
-            this.gunaButton7.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaButton7.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton7.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton7.OnHoverImage = null;
-            this.gunaButton7.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton7.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton7.TabIndex = 29;
-            this.gunaButton7.Text = "View Medicine";
-            this.gunaButton7.Click += new System.EventHandler(this.gunaButton7_Click);
+            this.btnViewMedicine.AnimationHoverSpeed = 0.07F;
+            this.btnViewMedicine.AnimationSpeed = 0.03F;
+            this.btnViewMedicine.BaseColor = System.Drawing.Color.Transparent;
+            this.btnViewMedicine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnViewMedicine.BorderSize = 3;
+            this.btnViewMedicine.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnViewMedicine.FocusedColor = System.Drawing.Color.Empty;
+            this.btnViewMedicine.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewMedicine.ForeColor = System.Drawing.Color.White;
+            this.btnViewMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnViewMedicine.Image")));
+            this.btnViewMedicine.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnViewMedicine.Location = new System.Drawing.Point(77, 383);
+            this.btnViewMedicine.Name = "btnViewMedicine";
+            this.btnViewMedicine.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnViewMedicine.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnViewMedicine.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnViewMedicine.OnHoverImage = null;
+            this.btnViewMedicine.OnPressedColor = System.Drawing.Color.Black;
+            this.btnViewMedicine.Size = new System.Drawing.Size(200, 51);
+            this.btnViewMedicine.TabIndex = 38;
+            this.btnViewMedicine.Text = "View Medicine";
+            this.btnViewMedicine.Click += new System.EventHandler(this.btnViewMedicine_Click);
             // 
             // gunaButton8
             // 
@@ -216,7 +212,7 @@
             this.gunaButton8.OnHoverImage = null;
             this.gunaButton8.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton8.Size = new System.Drawing.Size(200, 51);
-            this.gunaButton8.TabIndex = 28;
+            this.gunaButton8.TabIndex = 37;
             this.gunaButton8.Text = "Add Medicine";
             this.gunaButton8.Click += new System.EventHandler(this.gunaButton8_Click);
             // 
@@ -227,7 +223,7 @@
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(147, 152);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 25;
+            this.pictureBox3.TabIndex = 34;
             this.pictureBox3.TabStop = false;
             // 
             // btnDashboard
@@ -251,7 +247,7 @@
             this.btnDashboard.OnHoverImage = null;
             this.btnDashboard.OnPressedColor = System.Drawing.Color.Black;
             this.btnDashboard.Size = new System.Drawing.Size(200, 51);
-            this.btnDashboard.TabIndex = 27;
+            this.btnDashboard.TabIndex = 36;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
@@ -263,110 +259,119 @@
             this.label5.Location = new System.Drawing.Point(94, 198);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 33);
-            this.label5.TabIndex = 26;
+            this.label5.TabIndex = 35;
             this.label5.Text = "Pharmacist";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(402, 29);
+            this.label1.Location = new System.Drawing.Point(408, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Dashboard";
+            this.label1.Size = new System.Drawing.Size(161, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "View Medicine";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel2
+            // txtmedi
             // 
-            this.panel2.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panel2.Controls.Add(this.btnReload);
-            this.panel2.Controls.Add(this.chart1);
-            this.panel2.Location = new System.Drawing.Point(516, 119);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(698, 517);
-            this.panel2.TabIndex = 4;
+            this.txtmedi.BaseColor = System.Drawing.Color.White;
+            this.txtmedi.BorderColor = System.Drawing.Color.Silver;
+            this.txtmedi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmedi.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtmedi.FocusedBorderColor = System.Drawing.Color.Black;
+            this.txtmedi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtmedi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmedi.ForeColor = System.Drawing.Color.Silver;
+            this.txtmedi.Location = new System.Drawing.Point(593, 163);
+            this.txtmedi.Name = "txtmedi";
+            this.txtmedi.PasswordChar = '\0';
+            this.txtmedi.SelectedText = "";
+            this.txtmedi.Size = new System.Drawing.Size(290, 30);
+            this.txtmedi.TabIndex = 14;
+            this.txtmedi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtmedi.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
-            // btnReload
+            // btnDelete
             // 
-            this.btnReload.AnimationHoverSpeed = 0.07F;
-            this.btnReload.AnimationSpeed = 0.03F;
-            this.btnReload.BackColor = System.Drawing.Color.Transparent;
-            this.btnReload.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnReload.BorderColor = System.Drawing.Color.Beige;
-            this.btnReload.BorderSize = 2;
-            this.btnReload.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnReload.FocusedColor = System.Drawing.Color.Empty;
-            this.btnReload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.ForeColor = System.Drawing.Color.White;
-            this.btnReload.Image = null;
-            this.btnReload.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnReload.Location = new System.Drawing.Point(536, 457);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnReload.OnHoverBorderColor = System.Drawing.Color.LightGray;
-            this.btnReload.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnReload.OnHoverImage = null;
-            this.btnReload.OnPressedColor = System.Drawing.Color.Black;
-            this.btnReload.Radius = 19;
-            this.btnReload.Size = new System.Drawing.Size(125, 42);
-            this.btnReload.TabIndex = 1;
-            this.btnReload.Text = "Reload";
-            this.btnReload.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            this.btnDelete.AnimationHoverSpeed = 0.07F;
+            this.btnDelete.AnimationSpeed = 0.03F;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = null;
+            this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDelete.Location = new System.Drawing.Point(1143, 641);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDelete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDelete.OnHoverImage = null;
+            this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDelete.Radius = 19;
+            this.btnDelete.Size = new System.Drawing.Size(160, 35);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // chart1
+            // dataGridView1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(151, 79);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.Yellow;
-            series1.Legend = "Legend1";
-            series1.Name = "Expired Medicines";
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series2.Legend = "Legend1";
-            series2.Name = "Valid Medicines";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(416, 355);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(441, 225);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(862, 391);
+            this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(589, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Search By Medicine Name";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1321, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1326, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(26, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Pharmacist
+            // ViewMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1364, 721);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.txtmedi);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Pharmacist";
+            this.Name = "ViewMedicine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pharmacist";
-            this.Load += new System.EventHandler(this.Pharmacist_Load);
+            this.Text = "ViewMedicine";
+            this.Load += new System.EventHandler(this.ViewMedicine_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -376,19 +381,20 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaButton btnLogOut;
         private Guna.UI.WinForms.GunaButton gunaButton6;
-        private Guna.UI.WinForms.GunaButton gunaButton7;
+        private Guna.UI.WinForms.GunaButton btnViewMedicine;
         private Guna.UI.WinForms.GunaButton gunaButton8;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI.WinForms.GunaButton btnDashboard;
         private System.Windows.Forms.Label label5;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private Guna.UI.WinForms.GunaButton btnReload;
+        private Guna.UI.WinForms.GunaTextBox txtmedi;
+        private Guna.UI.WinForms.GunaButton btnDelete;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

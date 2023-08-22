@@ -83,5 +83,41 @@ namespace Pharmacy_Management_System
             txtQty.Clear();
             txtPrice.Clear();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gunaButton7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            ViewMedicine vm = new ViewMedicine();
+            vm.Show();
+        }
+
+        private void gunaButton6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            ModifyMedicine mm = new ModifyMedicine();
+            mm.Show();
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

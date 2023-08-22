@@ -78,6 +78,21 @@ namespace Pharmacy_Management_System
             chart1.Series["Expired Medicines"].Points.Clear();
             loadChart();
         }
-        
+
+        private void gunaButton7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            ViewMedicine vm = new ViewMedicine();
+            vm.Show();
+        }
+
+        private void gunaButton6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            ModifyMedicine mm = new ModifyMedicine();
+            mm.Show();
+        }
     }
 }

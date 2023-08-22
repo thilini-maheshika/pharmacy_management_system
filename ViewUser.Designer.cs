@@ -242,6 +242,7 @@
             this.label2.Size = new System.Drawing.Size(159, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Search By Username";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
             // 
@@ -253,6 +254,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(862, 391);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnDelete
             // 
