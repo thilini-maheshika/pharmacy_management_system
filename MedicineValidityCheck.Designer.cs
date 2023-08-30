@@ -1,6 +1,6 @@
 ﻿namespace Pharmacy_Management_System
 {
-    partial class ModifyMedicine
+    partial class MedicineValidityCheck
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyMedicine));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicineValidityCheck));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
@@ -39,30 +39,16 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new Guna.UI.WinForms.GunaButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtExpDate = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtMediID = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtQty = new System.Windows.Forms.TextBox();
-            this.txtMediNumber = new System.Windows.Forms.TextBox();
-            this.txtMediName = new System.Windows.Forms.TextBox();
-            this.btnreset = new Guna.UI.WinForms.GunaButton();
-            this.btnUpdate = new Guna.UI.WinForms.GunaButton();
-            this.txtManuDate = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnsearch = new Guna.UI.WinForms.GunaButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtaddqty = new System.Windows.Forms.TextBox();
+            this.txtCheck = new Guna.UI.WinForms.GunaComboBox();
+            this.setLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,7 +66,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(351, 722);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // gunaButton2
             // 
@@ -130,6 +116,7 @@
             this.gunaButton1.Size = new System.Drawing.Size(200, 51);
             this.gunaButton1.TabIndex = 50;
             this.gunaButton1.Text = "Medicine Validity Check";
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // btnLogOut
             // 
@@ -277,301 +264,103 @@
             this.label5.TabIndex = 44;
             this.label5.Text = "Pharmacist";
             // 
-            // txtExpDate
+            // pictureBox1
             // 
-            this.txtExpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtExpDate.Location = new System.Drawing.Point(932, 149);
-            this.txtExpDate.Name = "txtExpDate";
-            this.txtExpDate.Size = new System.Drawing.Size(341, 20);
-            this.txtExpDate.TabIndex = 64;
-            this.txtExpDate.Value = new System.DateTime(2023, 8, 18, 23, 10, 5, 0);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1326, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label7
+            // dataGridView1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(929, 109);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 18);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "Expire Date";
-            // 
-            // txtMediID
-            // 
-            this.txtMediID.ForeColor = System.Drawing.Color.Black;
-            this.txtMediID.Location = new System.Drawing.Point(410, 140);
-            this.txtMediID.Name = "txtMediID";
-            this.txtMediID.Size = new System.Drawing.Size(340, 20);
-            this.txtMediID.TabIndex = 62;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtPrice.Location = new System.Drawing.Point(933, 381);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(320, 20);
-            this.txtPrice.TabIndex = 61;
-            // 
-            // txtQty
-            // 
-            this.txtQty.ForeColor = System.Drawing.Color.Black;
-            this.txtQty.Location = new System.Drawing.Point(932, 261);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(321, 20);
-            this.txtQty.TabIndex = 60;
-            // 
-            // txtMediNumber
-            // 
-            this.txtMediNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtMediNumber.Location = new System.Drawing.Point(410, 379);
-            this.txtMediNumber.Name = "txtMediNumber";
-            this.txtMediNumber.Size = new System.Drawing.Size(340, 20);
-            this.txtMediNumber.TabIndex = 59;
-            // 
-            // txtMediName
-            // 
-            this.txtMediName.ForeColor = System.Drawing.Color.Black;
-            this.txtMediName.Location = new System.Drawing.Point(410, 261);
-            this.txtMediName.Name = "txtMediName";
-            this.txtMediName.Size = new System.Drawing.Size(340, 20);
-            this.txtMediName.TabIndex = 58;
-            // 
-            // btnreset
-            // 
-            this.btnreset.AnimationHoverSpeed = 0.07F;
-            this.btnreset.AnimationSpeed = 0.03F;
-            this.btnreset.BackColor = System.Drawing.Color.Transparent;
-            this.btnreset.BaseColor = System.Drawing.Color.Teal;
-            this.btnreset.BorderColor = System.Drawing.Color.Black;
-            this.btnreset.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnreset.FocusedColor = System.Drawing.Color.Empty;
-            this.btnreset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreset.ForeColor = System.Drawing.Color.White;
-            this.btnreset.Image = null;
-            this.btnreset.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnreset.Location = new System.Drawing.Point(1149, 518);
-            this.btnreset.Name = "btnreset";
-            this.btnreset.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.btnreset.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnreset.OnHoverForeColor = System.Drawing.Color.LightGray;
-            this.btnreset.OnHoverImage = null;
-            this.btnreset.OnPressedColor = System.Drawing.Color.Black;
-            this.btnreset.Radius = 19;
-            this.btnreset.Size = new System.Drawing.Size(160, 42);
-            this.btnreset.TabIndex = 57;
-            this.btnreset.Text = "Reset";
-            this.btnreset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.AnimationHoverSpeed = 0.07F;
-            this.btnUpdate.AnimationSpeed = 0.03F;
-            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.BaseColor = System.Drawing.Color.Teal;
-            this.btnUpdate.BorderColor = System.Drawing.Color.Black;
-            this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnUpdate.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Image = null;
-            this.btnUpdate.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUpdate.Location = new System.Drawing.Point(923, 518);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUpdate.OnHoverForeColor = System.Drawing.Color.LightGray;
-            this.btnUpdate.OnHoverImage = null;
-            this.btnUpdate.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUpdate.Radius = 19;
-            this.btnUpdate.Size = new System.Drawing.Size(160, 42);
-            this.btnUpdate.TabIndex = 56;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // txtManuDate
-            // 
-            this.txtManuDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtManuDate.Location = new System.Drawing.Point(411, 487);
-            this.txtManuDate.Name = "txtManuDate";
-            this.txtManuDate.Size = new System.Drawing.Size(341, 20);
-            this.txtManuDate.TabIndex = 55;
-            this.txtManuDate.Value = new System.DateTime(2023, 8, 18, 23, 10, 5, 0);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(929, 347);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 18);
-            this.label9.TabIndex = 54;
-            this.label9.Text = "Price Per Unit";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(930, 229);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 18);
-            this.label8.TabIndex = 53;
-            this.label8.Text = "Available Quantity";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(407, 344);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 18);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "Medicine Number";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(408, 447);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 18);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Manufacturing Date";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(408, 223);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 18);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "Medicine Name";
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(442, 221);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(862, 391);
+            this.dataGridView1.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(408, 109);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(596, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 18);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Medicine ID";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1320, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label2.Size = new System.Drawing.Size(115, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Check Validity";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(405, 25);
+            this.label1.Location = new System.Drawing.Point(408, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 29);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Modify Medicine";
+            this.label1.Size = new System.Drawing.Size(251, 29);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Medicine Validity Check";
             // 
-            // btnsearch
+            // txtCheck
             // 
-            this.btnsearch.AnimationHoverSpeed = 0.07F;
-            this.btnsearch.AnimationSpeed = 0.03F;
-            this.btnsearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnsearch.BaseColor = System.Drawing.Color.Teal;
-            this.btnsearch.BorderColor = System.Drawing.Color.Black;
-            this.btnsearch.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnsearch.FocusedColor = System.Drawing.Color.Empty;
-            this.btnsearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsearch.ForeColor = System.Drawing.Color.White;
-            this.btnsearch.Image = ((System.Drawing.Image)(resources.GetObject("btnsearch.Image")));
-            this.btnsearch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnsearch.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnsearch.Location = new System.Drawing.Point(650, 179);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.btnsearch.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnsearch.OnHoverForeColor = System.Drawing.Color.LightGray;
-            this.btnsearch.OnHoverImage = null;
-            this.btnsearch.OnPressedColor = System.Drawing.Color.Black;
-            this.btnsearch.Radius = 16;
-            this.btnsearch.Size = new System.Drawing.Size(102, 30);
-            this.btnsearch.TabIndex = 65;
-            this.btnsearch.Text = "Search";
-            this.btnsearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
+            this.txtCheck.BackColor = System.Drawing.Color.Transparent;
+            this.txtCheck.BaseColor = System.Drawing.Color.White;
+            this.txtCheck.BorderColor = System.Drawing.Color.Silver;
+            this.txtCheck.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtCheck.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtCheck.FocusedColor = System.Drawing.Color.Empty;
+            this.txtCheck.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtCheck.ForeColor = System.Drawing.Color.Black;
+            this.txtCheck.FormattingEnabled = true;
+            this.txtCheck.Items.AddRange(new object[] {
+            "Valid Medicines",
+            "Expired Medicines",
+            "View All Medicines"});
+            this.txtCheck.Location = new System.Drawing.Point(600, 131);
+            this.txtCheck.Name = "txtCheck";
+            this.txtCheck.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtCheck.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.txtCheck.Size = new System.Drawing.Size(232, 26);
+            this.txtCheck.TabIndex = 22;
+            this.txtCheck.SelectedIndexChanged += new System.EventHandler(this.txtCheck_SelectedIndexChanged);
             // 
-            // label10
+            // setLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1060, 296);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 18);
-            this.label10.TabIndex = 66;
-            this.label10.Text = "Add Quantity";
+            this.setLabel.AutoSize = true;
+            this.setLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setLabel.Location = new System.Drawing.Point(442, 184);
+            this.setLabel.Name = "setLabel";
+            this.setLabel.Size = new System.Drawing.Size(0, 20);
+            this.setLabel.TabIndex = 23;
             // 
-            // txtaddqty
-            // 
-            this.txtaddqty.ForeColor = System.Drawing.Color.Black;
-            this.txtaddqty.Location = new System.Drawing.Point(1158, 296);
-            this.txtaddqty.Name = "txtaddqty";
-            this.txtaddqty.Size = new System.Drawing.Size(95, 20);
-            this.txtaddqty.TabIndex = 67;
-            this.txtaddqty.Text = "0";
-            this.txtaddqty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ModifyMedicine
+            // MedicineValidityCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1364, 721);
-            this.Controls.Add(this.txtaddqty);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.btnsearch);
-            this.Controls.Add(this.txtExpDate);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtMediID);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtQty);
-            this.Controls.Add(this.txtMediNumber);
-            this.Controls.Add(this.txtMediName);
-            this.Controls.Add(this.btnreset);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtManuDate);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.setLabel);
+            this.Controls.Add(this.txtCheck);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ModifyMedicine";
+            this.Name = "MedicineValidityCheck";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ModifyMedicine";
+            this.Text = "MedicineValidityCheck";
+            this.Load += new System.EventHandler(this.MedicineValidityCheck_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,26 +378,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI.WinForms.GunaButton btnDashboard;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker txtExpDate;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtMediID;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtQty;
-        private System.Windows.Forms.TextBox txtMediNumber;
-        private System.Windows.Forms.TextBox txtMediName;
-        private Guna.UI.WinForms.GunaButton btnreset;
-        private Guna.UI.WinForms.GunaButton btnUpdate;
-        private System.Windows.Forms.DateTimePicker txtManuDate;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaButton btnsearch;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtaddqty;
+        private Guna.UI.WinForms.GunaComboBox txtCheck;
+        private System.Windows.Forms.Label setLabel;
     }
 }

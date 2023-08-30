@@ -94,5 +94,21 @@ namespace Pharmacy_Management_System
             ModifyMedicine mm = new ModifyMedicine();
             mm.Show();
         }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MedicineValidityCheck mv = new MedicineValidityCheck();
+            mv.Show();
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            SellMedicine sm = new SellMedicine();
+            sm.Show();
+        }
     }
 }

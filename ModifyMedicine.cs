@@ -124,5 +124,20 @@ namespace Pharmacy_Management_System
             ModifyMedicine mm = new ModifyMedicine();
             mm.Show();
         }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            SellMedicine sm = new SellMedicine();
+            sm.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Form1 loginform = new Form1();
+            loginform.Show();
+            this.Close();
+        }
     }
 }

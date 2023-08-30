@@ -38,3 +38,5 @@ D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Manageme
 D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.AddMedicine.resources
 D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.ViewMedicine.resources
 D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.ModifyMedicine.resources
+D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.MedicineValidityCheck.resources
+D:\C#\Pharmacy_Management\pharmacy_management_system\obj\Debug\Pharmacy_Management_System.SellMedicine.resources

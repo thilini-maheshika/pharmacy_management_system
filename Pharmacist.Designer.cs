@@ -95,6 +95,7 @@
             this.gunaButton2.Size = new System.Drawing.Size(200, 51);
             this.gunaButton2.TabIndex = 33;
             this.gunaButton2.Text = "Sell Medicine";
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // gunaButton1
             // 
@@ -119,6 +120,7 @@
             this.gunaButton1.Size = new System.Drawing.Size(200, 51);
             this.gunaButton1.TabIndex = 32;
             this.gunaButton1.Text = "Medicine Validity Check";
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // btnLogOut
             // 
