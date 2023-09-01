@@ -41,20 +41,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.txtmobile = new System.Windows.Forms.TextBox();
-            this.txtname = new System.Windows.Forms.TextBox();
-            this.txtdob = new System.Windows.Forms.DateTimePicker();
-            this.txtuserrole = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtpassword = new System.Windows.Forms.TextBox();
-            this.txtemail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnreset = new Guna.UI.WinForms.GunaButton();
             this.btnupdate = new Guna.UI.WinForms.GunaButton();
+            this.txtuserrole = new Guna.UI.WinForms.GunaTextBox();
+            this.txtname = new Guna.UI.WinForms.GunaTextBox();
+            this.txtdob = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.txtmobile = new Guna.UI.WinForms.GunaTextBox();
+            this.txtemail = new Guna.UI.WinForms.GunaTextBox();
+            this.txtpassword = new Guna.UI.WinForms.GunaTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -266,42 +266,6 @@
             this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelUsername.Enter += new System.EventHandler(this.labelUsername_Enter);
             // 
-            // txtmobile
-            // 
-            this.txtmobile.ForeColor = System.Drawing.Color.Black;
-            this.txtmobile.Location = new System.Drawing.Point(805, 359);
-            this.txtmobile.Name = "txtmobile";
-            this.txtmobile.Size = new System.Drawing.Size(340, 20);
-            this.txtmobile.TabIndex = 29;
-            // 
-            // txtname
-            // 
-            this.txtname.ForeColor = System.Drawing.Color.Black;
-            this.txtname.Location = new System.Drawing.Point(803, 207);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(340, 20);
-            this.txtname.TabIndex = 28;
-            // 
-            // txtdob
-            // 
-            this.txtdob.Location = new System.Drawing.Point(804, 284);
-            this.txtdob.Name = "txtdob";
-            this.txtdob.Size = new System.Drawing.Size(341, 20);
-            this.txtdob.TabIndex = 27;
-            // 
-            // txtuserrole
-            // 
-            this.txtuserrole.ForeColor = System.Drawing.Color.Black;
-            this.txtuserrole.FormattingEnabled = true;
-            this.txtuserrole.Items.AddRange(new object[] {
-            "Adminstrator",
-            "Pharmacist"});
-            this.txtuserrole.Location = new System.Drawing.Point(803, 126);
-            this.txtuserrole.Margin = new System.Windows.Forms.Padding(4);
-            this.txtuserrole.Name = "txtuserrole";
-            this.txtuserrole.Size = new System.Drawing.Size(340, 21);
-            this.txtuserrole.TabIndex = 26;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -345,22 +309,6 @@
             this.label7.Size = new System.Drawing.Size(75, 18);
             this.label7.TabIndex = 22;
             this.label7.Text = "User Role";
-            // 
-            // txtpassword
-            // 
-            this.txtpassword.ForeColor = System.Drawing.Color.Black;
-            this.txtpassword.Location = new System.Drawing.Point(804, 505);
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(341, 20);
-            this.txtpassword.TabIndex = 33;
-            // 
-            // txtemail
-            // 
-            this.txtemail.ForeColor = System.Drawing.Color.Black;
-            this.txtemail.Location = new System.Drawing.Point(805, 427);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(340, 20);
-            this.txtemail.TabIndex = 32;
             // 
             // label9
             // 
@@ -438,22 +386,124 @@
             this.btnupdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnupdate.Click += new System.EventHandler(this.btnsignup_Click);
             // 
+            // txtuserrole
+            // 
+            this.txtuserrole.BaseColor = System.Drawing.Color.White;
+            this.txtuserrole.BorderColor = System.Drawing.Color.Silver;
+            this.txtuserrole.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtuserrole.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtuserrole.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtuserrole.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtuserrole.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuserrole.Location = new System.Drawing.Point(804, 127);
+            this.txtuserrole.Name = "txtuserrole";
+            this.txtuserrole.PasswordChar = '\0';
+            this.txtuserrole.SelectedText = "";
+            this.txtuserrole.Size = new System.Drawing.Size(339, 30);
+            this.txtuserrole.TabIndex = 36;
+            // 
+            // txtname
+            // 
+            this.txtname.BaseColor = System.Drawing.Color.White;
+            this.txtname.BorderColor = System.Drawing.Color.Silver;
+            this.txtname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtname.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtname.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtname.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtname.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtname.Location = new System.Drawing.Point(805, 198);
+            this.txtname.Name = "txtname";
+            this.txtname.PasswordChar = '\0';
+            this.txtname.SelectedText = "";
+            this.txtname.Size = new System.Drawing.Size(339, 30);
+            this.txtname.TabIndex = 37;
+            // 
+            // txtdob
+            // 
+            this.txtdob.BaseColor = System.Drawing.Color.White;
+            this.txtdob.BorderColor = System.Drawing.Color.Silver;
+            this.txtdob.CustomFormat = null;
+            this.txtdob.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.txtdob.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtdob.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdob.ForeColor = System.Drawing.Color.Black;
+            this.txtdob.Location = new System.Drawing.Point(803, 281);
+            this.txtdob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtdob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtdob.Name = "txtdob";
+            this.txtdob.OnHoverBaseColor = System.Drawing.Color.White;
+            this.txtdob.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtdob.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtdob.OnPressedColor = System.Drawing.Color.Black;
+            this.txtdob.Size = new System.Drawing.Size(342, 30);
+            this.txtdob.TabIndex = 38;
+            this.txtdob.Text = "Friday, September 1, 2023";
+            this.txtdob.Value = new System.DateTime(2023, 9, 1, 16, 54, 2, 308);
+            // 
+            // txtmobile
+            // 
+            this.txtmobile.BaseColor = System.Drawing.Color.White;
+            this.txtmobile.BorderColor = System.Drawing.Color.Silver;
+            this.txtmobile.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmobile.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtmobile.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtmobile.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtmobile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmobile.Location = new System.Drawing.Point(804, 351);
+            this.txtmobile.Name = "txtmobile";
+            this.txtmobile.PasswordChar = '\0';
+            this.txtmobile.SelectedText = "";
+            this.txtmobile.Size = new System.Drawing.Size(339, 30);
+            this.txtmobile.TabIndex = 39;
+            // 
+            // txtemail
+            // 
+            this.txtemail.BaseColor = System.Drawing.Color.White;
+            this.txtemail.BorderColor = System.Drawing.Color.Silver;
+            this.txtemail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtemail.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtemail.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtemail.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtemail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtemail.Location = new System.Drawing.Point(804, 429);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.PasswordChar = '\0';
+            this.txtemail.SelectedText = "";
+            this.txtemail.Size = new System.Drawing.Size(339, 30);
+            this.txtemail.TabIndex = 40;
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.BaseColor = System.Drawing.Color.White;
+            this.txtpassword.BorderColor = System.Drawing.Color.Silver;
+            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpassword.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtpassword.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtpassword.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.Location = new System.Drawing.Point(803, 504);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.SelectedText = "";
+            this.txtpassword.Size = new System.Drawing.Size(339, 30);
+            this.txtpassword.TabIndex = 41;
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1364, 721);
-            this.Controls.Add(this.btnreset);
-            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.txtmobile);
+            this.Controls.Add(this.txtdob);
+            this.Controls.Add(this.txtname);
+            this.Controls.Add(this.txtuserrole);
+            this.Controls.Add(this.btnreset);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtmobile);
-            this.Controls.Add(this.txtname);
-            this.Controls.Add(this.txtdob);
-            this.Controls.Add(this.txtuserrole);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -491,19 +541,19 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelUsername;
-        private System.Windows.Forms.TextBox txtmobile;
-        private System.Windows.Forms.TextBox txtname;
-        private System.Windows.Forms.DateTimePicker txtdob;
-        private System.Windows.Forms.ComboBox txtuserrole;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtpassword;
-        private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private Guna.UI.WinForms.GunaButton btnreset;
         private Guna.UI.WinForms.GunaButton btnupdate;
+        private Guna.UI.WinForms.GunaTextBox txtuserrole;
+        private Guna.UI.WinForms.GunaTextBox txtname;
+        private Guna.UI.WinForms.GunaDateTimePicker txtdob;
+        private Guna.UI.WinForms.GunaTextBox txtmobile;
+        private Guna.UI.WinForms.GunaTextBox txtemail;
+        private Guna.UI.WinForms.GunaTextBox txtpassword;
     }
 }

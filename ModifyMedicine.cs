@@ -139,5 +139,13 @@ namespace Pharmacy_Management_System
             loginform.Show();
             this.Close();
         }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MedicineValidityCheck mv = new MedicineValidityCheck();
+            mv.Show();
+        }
     }
 }

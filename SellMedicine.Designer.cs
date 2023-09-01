@@ -40,27 +40,33 @@
             this.btnDashboard = new Guna.UI.WinForms.GunaButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtmedi = new Guna.UI.WinForms.GunaTextBox();
+            this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxMedicines = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnreset = new Guna.UI.WinForms.GunaButton();
+            this.btnAddtoCart = new Guna.UI.WinForms.GunaButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaTextBox5 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaDateTimePicker1 = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.txtMediName = new Guna.UI.WinForms.GunaTextBox();
+            this.txtMediId = new Guna.UI.WinForms.GunaTextBox();
+            this.txtPricePerUnit = new Guna.UI.WinForms.GunaTextBox();
+            this.txtNoOfUnit = new Guna.UI.WinForms.GunaTextBox();
+            this.txtTotPrice = new Guna.UI.WinForms.GunaTextBox();
+            this.txtExpDate = new Guna.UI.WinForms.GunaDateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
+            this.btnRemove = new Guna.UI.WinForms.GunaButton();
+            this.btnPurchase = new Guna.UI.WinForms.GunaButton();
             this.price_label = new Guna.UI.WinForms.GunaTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -285,29 +291,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(405, 29);
+            this.label1.Location = new System.Drawing.Point(402, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 29);
             this.label1.TabIndex = 6;
             this.label1.Text = "Sell Medicine";
             // 
-            // txtmedi
+            // txtSearch
             // 
-            this.txtmedi.BaseColor = System.Drawing.Color.White;
-            this.txtmedi.BorderColor = System.Drawing.Color.Silver;
-            this.txtmedi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmedi.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtmedi.FocusedBorderColor = System.Drawing.Color.Black;
-            this.txtmedi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtmedi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmedi.ForeColor = System.Drawing.Color.Silver;
-            this.txtmedi.Location = new System.Drawing.Point(382, 117);
-            this.txtmedi.Name = "txtmedi";
-            this.txtmedi.PasswordChar = '\0';
-            this.txtmedi.SelectedText = "";
-            this.txtmedi.Size = new System.Drawing.Size(265, 30);
-            this.txtmedi.TabIndex = 16;
-            this.txtmedi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.BaseColor = System.Drawing.Color.White;
+            this.txtSearch.BorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtSearch.FocusedBorderColor = System.Drawing.Color.Black;
+            this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
+            this.txtSearch.Location = new System.Drawing.Point(382, 117);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(265, 30);
+            this.txtSearch.TabIndex = 16;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label2
             // 
@@ -319,13 +326,16 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Search";
             // 
-            // listBox1
+            // listBoxMedicines
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(385, 197);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(262, 433);
-            this.listBox1.TabIndex = 17;
+            this.listBoxMedicines.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxMedicines.FormattingEnabled = true;
+            this.listBoxMedicines.ItemHeight = 18;
+            this.listBoxMedicines.Location = new System.Drawing.Point(385, 197);
+            this.listBoxMedicines.Name = "listBoxMedicines";
+            this.listBoxMedicines.Size = new System.Drawing.Size(262, 418);
+            this.listBoxMedicines.TabIndex = 17;
+            this.listBoxMedicines.SelectedIndexChanged += new System.EventHandler(this.listBoxMedicines_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -349,31 +359,32 @@
             this.label7.TabIndex = 82;
             this.label7.Text = "Expire Date";
             // 
-            // btnreset
+            // btnAddtoCart
             // 
-            this.btnreset.AnimationHoverSpeed = 0.07F;
-            this.btnreset.AnimationSpeed = 0.03F;
-            this.btnreset.BackColor = System.Drawing.Color.Transparent;
-            this.btnreset.BaseColor = System.Drawing.Color.Teal;
-            this.btnreset.BorderColor = System.Drawing.Color.Black;
-            this.btnreset.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnreset.FocusedColor = System.Drawing.Color.Empty;
-            this.btnreset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreset.ForeColor = System.Drawing.Color.White;
-            this.btnreset.Image = null;
-            this.btnreset.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnreset.Location = new System.Drawing.Point(1146, 320);
-            this.btnreset.Name = "btnreset";
-            this.btnreset.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.btnreset.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnreset.OnHoverForeColor = System.Drawing.Color.LightGray;
-            this.btnreset.OnHoverImage = null;
-            this.btnreset.OnPressedColor = System.Drawing.Color.Black;
-            this.btnreset.Radius = 19;
-            this.btnreset.Size = new System.Drawing.Size(160, 42);
-            this.btnreset.TabIndex = 76;
-            this.btnreset.Text = "Add to Cart";
-            this.btnreset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddtoCart.AnimationHoverSpeed = 0.07F;
+            this.btnAddtoCart.AnimationSpeed = 0.03F;
+            this.btnAddtoCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddtoCart.BaseColor = System.Drawing.Color.Teal;
+            this.btnAddtoCart.BorderColor = System.Drawing.Color.Black;
+            this.btnAddtoCart.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAddtoCart.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAddtoCart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddtoCart.ForeColor = System.Drawing.Color.White;
+            this.btnAddtoCart.Image = null;
+            this.btnAddtoCart.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAddtoCart.Location = new System.Drawing.Point(1147, 320);
+            this.btnAddtoCart.Name = "btnAddtoCart";
+            this.btnAddtoCart.OnHoverBaseColor = System.Drawing.Color.DarkGray;
+            this.btnAddtoCart.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAddtoCart.OnHoverForeColor = System.Drawing.Color.LightGray;
+            this.btnAddtoCart.OnHoverImage = null;
+            this.btnAddtoCart.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAddtoCart.Radius = 19;
+            this.btnAddtoCart.Size = new System.Drawing.Size(160, 42);
+            this.btnAddtoCart.TabIndex = 76;
+            this.btnAddtoCart.Text = "Add to Cart";
+            this.btnAddtoCart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddtoCart.Click += new System.EventHandler(this.btnAddtoCart_Click);
             // 
             // label9
             // 
@@ -419,185 +430,191 @@
             this.label11.TabIndex = 68;
             this.label11.Text = "Medicine ID";
             // 
-            // gunaTextBox1
+            // txtMediName
             // 
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.Black;
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox1.ForeColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.Location = new System.Drawing.Point(712, 192);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.ReadOnly = true;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(251, 30);
-            this.gunaTextBox1.TabIndex = 86;
-            this.gunaTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMediName.BaseColor = System.Drawing.Color.White;
+            this.txtMediName.BorderColor = System.Drawing.Color.Silver;
+            this.txtMediName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMediName.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtMediName.FocusedBorderColor = System.Drawing.Color.Black;
+            this.txtMediName.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtMediName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMediName.ForeColor = System.Drawing.Color.Black;
+            this.txtMediName.Location = new System.Drawing.Point(712, 192);
+            this.txtMediName.Name = "txtMediName";
+            this.txtMediName.PasswordChar = '\0';
+            this.txtMediName.ReadOnly = true;
+            this.txtMediName.SelectedText = "";
+            this.txtMediName.Size = new System.Drawing.Size(251, 30);
+            this.txtMediName.TabIndex = 86;
             // 
-            // gunaTextBox2
+            // txtMediId
             // 
-            this.gunaTextBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.Black;
-            this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox2.ForeColor = System.Drawing.Color.Silver;
-            this.gunaTextBox2.Location = new System.Drawing.Point(712, 117);
-            this.gunaTextBox2.Name = "gunaTextBox2";
-            this.gunaTextBox2.PasswordChar = '\0';
-            this.gunaTextBox2.ReadOnly = true;
-            this.gunaTextBox2.SelectedText = "";
-            this.gunaTextBox2.Size = new System.Drawing.Size(251, 30);
-            this.gunaTextBox2.TabIndex = 87;
-            this.gunaTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMediId.BaseColor = System.Drawing.Color.White;
+            this.txtMediId.BorderColor = System.Drawing.Color.Silver;
+            this.txtMediId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMediId.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtMediId.FocusedBorderColor = System.Drawing.Color.Black;
+            this.txtMediId.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtMediId.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMediId.ForeColor = System.Drawing.Color.Black;
+            this.txtMediId.Location = new System.Drawing.Point(712, 117);
+            this.txtMediId.Name = "txtMediId";
+            this.txtMediId.PasswordChar = '\0';
+            this.txtMediId.ReadOnly = true;
+            this.txtMediId.SelectedText = "";
+            this.txtMediId.Size = new System.Drawing.Size(251, 30);
+            this.txtMediId.TabIndex = 87;
             // 
-            // gunaTextBox3
+            // txtPricePerUnit
             // 
-            this.gunaTextBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.Black;
-            this.gunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox3.ForeColor = System.Drawing.Color.Silver;
-            this.gunaTextBox3.Location = new System.Drawing.Point(1054, 117);
-            this.gunaTextBox3.Name = "gunaTextBox3";
-            this.gunaTextBox3.PasswordChar = '\0';
-            this.gunaTextBox3.ReadOnly = true;
-            this.gunaTextBox3.SelectedText = "";
-            this.gunaTextBox3.Size = new System.Drawing.Size(251, 30);
-            this.gunaTextBox3.TabIndex = 88;
-            this.gunaTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPricePerUnit.BaseColor = System.Drawing.Color.White;
+            this.txtPricePerUnit.BorderColor = System.Drawing.Color.Silver;
+            this.txtPricePerUnit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPricePerUnit.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPricePerUnit.FocusedBorderColor = System.Drawing.Color.Black;
+            this.txtPricePerUnit.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPricePerUnit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPricePerUnit.ForeColor = System.Drawing.Color.Black;
+            this.txtPricePerUnit.Location = new System.Drawing.Point(1054, 117);
+            this.txtPricePerUnit.Name = "txtPricePerUnit";
+            this.txtPricePerUnit.PasswordChar = '\0';
+            this.txtPricePerUnit.ReadOnly = true;
+            this.txtPricePerUnit.SelectedText = "";
+            this.txtPricePerUnit.Size = new System.Drawing.Size(251, 30);
+            this.txtPricePerUnit.TabIndex = 88;
             // 
-            // gunaTextBox4
+            // txtNoOfUnit
             // 
-            this.gunaTextBox4.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox4.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox4.FocusedBorderColor = System.Drawing.Color.Black;
-            this.gunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox4.ForeColor = System.Drawing.Color.Silver;
-            this.gunaTextBox4.Location = new System.Drawing.Point(1055, 192);
-            this.gunaTextBox4.Name = "gunaTextBox4";
-            this.gunaTextBox4.PasswordChar = '\0';
-            this.gunaTextBox4.SelectedText = "";
-            this.gunaTextBox4.Size = new System.Drawing.Size(251, 30);
-            this.gunaTextBox4.TabIndex = 89;
-            this.gunaTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNoOfUnit.BaseColor = System.Drawing.Color.White;
+            this.txtNoOfUnit.BorderColor = System.Drawing.Color.Silver;
+            this.txtNoOfUnit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNoOfUnit.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtNoOfUnit.FocusedBorderColor = System.Drawing.Color.Black;
+            this.txtNoOfUnit.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNoOfUnit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoOfUnit.ForeColor = System.Drawing.Color.Black;
+            this.txtNoOfUnit.Location = new System.Drawing.Point(1055, 192);
+            this.txtNoOfUnit.Name = "txtNoOfUnit";
+            this.txtNoOfUnit.PasswordChar = '\0';
+            this.txtNoOfUnit.SelectedText = "";
+            this.txtNoOfUnit.Size = new System.Drawing.Size(251, 30);
+            this.txtNoOfUnit.TabIndex = 89;
+            this.txtNoOfUnit.TextChanged += new System.EventHandler(this.txtNoOfUnit_TextChanged);
             // 
-            // gunaTextBox5
+            // txtTotPrice
             // 
-            this.gunaTextBox5.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox5.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox5.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox5.FocusedBorderColor = System.Drawing.Color.Black;
-            this.gunaTextBox5.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox5.ForeColor = System.Drawing.Color.Silver;
-            this.gunaTextBox5.Location = new System.Drawing.Point(1055, 274);
-            this.gunaTextBox5.Name = "gunaTextBox5";
-            this.gunaTextBox5.PasswordChar = '\0';
-            this.gunaTextBox5.ReadOnly = true;
-            this.gunaTextBox5.SelectedText = "";
-            this.gunaTextBox5.Size = new System.Drawing.Size(251, 30);
-            this.gunaTextBox5.TabIndex = 90;
-            this.gunaTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotPrice.BaseColor = System.Drawing.Color.White;
+            this.txtTotPrice.BorderColor = System.Drawing.Color.Silver;
+            this.txtTotPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotPrice.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTotPrice.FocusedBorderColor = System.Drawing.Color.Black;
+            this.txtTotPrice.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTotPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtTotPrice.Location = new System.Drawing.Point(1055, 274);
+            this.txtTotPrice.Name = "txtTotPrice";
+            this.txtTotPrice.PasswordChar = '\0';
+            this.txtTotPrice.ReadOnly = true;
+            this.txtTotPrice.SelectedText = "";
+            this.txtTotPrice.Size = new System.Drawing.Size(251, 30);
+            this.txtTotPrice.TabIndex = 90;
             // 
-            // gunaDateTimePicker1
+            // txtExpDate
             // 
-            this.gunaDateTimePicker1.BaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaDateTimePicker1.CustomFormat = null;
-            this.gunaDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.gunaDateTimePicker1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaDateTimePicker1.ForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.gunaDateTimePicker1.Location = new System.Drawing.Point(712, 274);
-            this.gunaDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.gunaDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.gunaDateTimePicker1.Name = "gunaDateTimePicker1";
-            this.gunaDateTimePicker1.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Size = new System.Drawing.Size(251, 30);
-            this.gunaDateTimePicker1.TabIndex = 91;
-            this.gunaDateTimePicker1.Text = "8/27/2023";
-            this.gunaDateTimePicker1.Value = new System.DateTime(2023, 8, 27, 22, 25, 45, 0);
+            this.txtExpDate.BaseColor = System.Drawing.Color.White;
+            this.txtExpDate.BorderColor = System.Drawing.Color.Silver;
+            this.txtExpDate.CustomFormat = null;
+            this.txtExpDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.txtExpDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtExpDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtExpDate.ForeColor = System.Drawing.Color.Black;
+            this.txtExpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtExpDate.Location = new System.Drawing.Point(712, 274);
+            this.txtExpDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtExpDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtExpDate.Name = "txtExpDate";
+            this.txtExpDate.OnHoverBaseColor = System.Drawing.Color.White;
+            this.txtExpDate.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtExpDate.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtExpDate.OnPressedColor = System.Drawing.Color.Black;
+            this.txtExpDate.Size = new System.Drawing.Size(251, 30);
+            this.txtExpDate.TabIndex = 91;
+            this.txtExpDate.Text = "8/27/2023";
+            this.txtExpDate.Value = new System.DateTime(2023, 8, 27, 22, 25, 45, 0);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(686, 376);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(629, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(628, 239);
             this.dataGridView1.TabIndex = 92;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // gunaButton3
+            // btnRemove
             // 
-            this.gunaButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaButton3.AnimationSpeed = 0.03F;
-            this.gunaButton3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaButton3.Image = null;
-            this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton3.Location = new System.Drawing.Point(687, 646);
-            this.gunaButton3.Name = "gunaButton3";
-            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.LightGray;
-            this.gunaButton3.OnHoverImage = null;
-            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Radius = 19;
-            this.gunaButton3.Size = new System.Drawing.Size(160, 42);
-            this.gunaButton3.TabIndex = 93;
-            this.gunaButton3.Text = "Remove";
-            this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnRemove.AnimationHoverSpeed = 0.07F;
+            this.btnRemove.AnimationSpeed = 0.03F;
+            this.btnRemove.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemove.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRemove.BorderColor = System.Drawing.Color.Black;
+            this.btnRemove.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRemove.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Image = null;
+            this.btnRemove.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRemove.Location = new System.Drawing.Point(687, 646);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.OnHoverBaseColor = System.Drawing.Color.DarkGray;
+            this.btnRemove.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRemove.OnHoverForeColor = System.Drawing.Color.LightGray;
+            this.btnRemove.OnHoverImage = null;
+            this.btnRemove.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRemove.Radius = 19;
+            this.btnRemove.Size = new System.Drawing.Size(160, 42);
+            this.btnRemove.TabIndex = 93;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // gunaButton4
+            // btnPurchase
             // 
-            this.gunaButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaButton4.AnimationSpeed = 0.03F;
-            this.gunaButton4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton4.BaseColor = System.Drawing.Color.Teal;
-            this.gunaButton4.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton4.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton4.ForeColor = System.Drawing.Color.White;
-            this.gunaButton4.Image = null;
-            this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton4.Location = new System.Drawing.Point(1167, 646);
-            this.gunaButton4.Name = "gunaButton4";
-            this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton4.OnHoverForeColor = System.Drawing.Color.LightGray;
-            this.gunaButton4.OnHoverImage = null;
-            this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton4.Radius = 19;
-            this.gunaButton4.Size = new System.Drawing.Size(160, 42);
-            this.gunaButton4.TabIndex = 94;
-            this.gunaButton4.Text = "Purchase & Print";
-            this.gunaButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnPurchase.AnimationHoverSpeed = 0.07F;
+            this.btnPurchase.AnimationSpeed = 0.03F;
+            this.btnPurchase.BackColor = System.Drawing.Color.Transparent;
+            this.btnPurchase.BaseColor = System.Drawing.Color.Teal;
+            this.btnPurchase.BorderColor = System.Drawing.Color.Black;
+            this.btnPurchase.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPurchase.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPurchase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchase.ForeColor = System.Drawing.Color.White;
+            this.btnPurchase.Image = null;
+            this.btnPurchase.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPurchase.Location = new System.Drawing.Point(1167, 646);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.OnHoverBaseColor = System.Drawing.Color.DarkGray;
+            this.btnPurchase.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPurchase.OnHoverForeColor = System.Drawing.Color.LightGray;
+            this.btnPurchase.OnHoverImage = null;
+            this.btnPurchase.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPurchase.Radius = 19;
+            this.btnPurchase.Size = new System.Drawing.Size(160, 42);
+            this.btnPurchase.TabIndex = 94;
+            this.btnPurchase.Text = "Purchase ";
+            this.btnPurchase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // price_label
             // 
@@ -623,13 +640,43 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1332, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(1328, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 96;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Total Price";
+            this.Column6.Name = "Column6";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "No of Units";
+            this.Column5.Name = "Column5";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Price Per Unit";
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Expire Date";
+            this.Column3.Name = "Column3";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Medicine ID";
+            this.Column1.Name = "Column1";
             // 
             // SellMedicine
             // 
@@ -639,24 +686,24 @@
             this.ClientSize = new System.Drawing.Size(1364, 721);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.price_label);
-            this.Controls.Add(this.gunaButton4);
-            this.Controls.Add(this.gunaButton3);
+            this.Controls.Add(this.btnPurchase);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.gunaDateTimePicker1);
-            this.Controls.Add(this.gunaTextBox5);
-            this.Controls.Add(this.gunaTextBox4);
-            this.Controls.Add(this.gunaTextBox3);
-            this.Controls.Add(this.gunaTextBox2);
-            this.Controls.Add(this.gunaTextBox1);
+            this.Controls.Add(this.txtExpDate);
+            this.Controls.Add(this.txtTotPrice);
+            this.Controls.Add(this.txtNoOfUnit);
+            this.Controls.Add(this.txtPricePerUnit);
+            this.Controls.Add(this.txtMediId);
+            this.Controls.Add(this.txtMediName);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnreset);
+            this.Controls.Add(this.btnAddtoCart);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.txtmedi);
+            this.Controls.Add(this.listBoxMedicines);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -688,26 +735,32 @@
         private Guna.UI.WinForms.GunaButton btnDashboard;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaTextBox txtmedi;
+        private Guna.UI.WinForms.GunaTextBox txtSearch;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxMedicines;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
-        private Guna.UI.WinForms.GunaButton btnreset;
+        private Guna.UI.WinForms.GunaButton btnAddtoCart;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox4;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox5;
-        private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker1;
+        private Guna.UI.WinForms.GunaTextBox txtMediName;
+        private Guna.UI.WinForms.GunaTextBox txtMediId;
+        private Guna.UI.WinForms.GunaTextBox txtPricePerUnit;
+        private Guna.UI.WinForms.GunaTextBox txtNoOfUnit;
+        private Guna.UI.WinForms.GunaTextBox txtTotPrice;
+        private Guna.UI.WinForms.GunaDateTimePicker txtExpDate;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Guna.UI.WinForms.GunaButton gunaButton3;
-        private Guna.UI.WinForms.GunaButton gunaButton4;
+        private Guna.UI.WinForms.GunaButton btnRemove;
+        private Guna.UI.WinForms.GunaButton btnPurchase;
         private Guna.UI.WinForms.GunaTextBox price_label;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

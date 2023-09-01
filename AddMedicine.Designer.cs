@@ -41,10 +41,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtQty = new System.Windows.Forms.TextBox();
-            this.txtMediNumber = new System.Windows.Forms.TextBox();
-            this.txtMediName = new System.Windows.Forms.TextBox();
             this.btnreset = new Guna.UI.WinForms.GunaButton();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,11 +48,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMediID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtManuDate = new System.Windows.Forms.DateTimePicker();
-            this.txtExpDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtMediID = new Guna.UI.WinForms.GunaTextBox();
+            this.txtMediName = new Guna.UI.WinForms.GunaTextBox();
+            this.txtMediNumber = new Guna.UI.WinForms.GunaTextBox();
+            this.txtManuDate = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.txtExpDate = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.txtQty = new Guna.UI.WinForms.GunaTextBox();
+            this.txtPrice = new Guna.UI.WinForms.GunaTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -298,38 +298,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txtPrice
-            // 
-            this.txtPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtPrice.Location = new System.Drawing.Point(930, 385);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(320, 20);
-            this.txtPrice.TabIndex = 42;
-            // 
-            // txtQty
-            // 
-            this.txtQty.ForeColor = System.Drawing.Color.Black;
-            this.txtQty.Location = new System.Drawing.Point(929, 265);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(321, 20);
-            this.txtQty.TabIndex = 41;
-            // 
-            // txtMediNumber
-            // 
-            this.txtMediNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtMediNumber.Location = new System.Drawing.Point(407, 383);
-            this.txtMediNumber.Name = "txtMediNumber";
-            this.txtMediNumber.Size = new System.Drawing.Size(340, 20);
-            this.txtMediNumber.TabIndex = 39;
-            // 
-            // txtMediName
-            // 
-            this.txtMediName.ForeColor = System.Drawing.Color.Black;
-            this.txtMediName.Location = new System.Drawing.Point(407, 265);
-            this.txtMediName.Name = "txtMediName";
-            this.txtMediName.Size = new System.Drawing.Size(340, 20);
-            this.txtMediName.TabIndex = 38;
-            // 
             // btnreset
             // 
             this.btnreset.AnimationHoverSpeed = 0.07F;
@@ -343,7 +311,7 @@
             this.btnreset.ForeColor = System.Drawing.Color.White;
             this.btnreset.Image = null;
             this.btnreset.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnreset.Location = new System.Drawing.Point(1146, 522);
+            this.btnreset.Location = new System.Drawing.Point(1144, 527);
             this.btnreset.Name = "btnreset";
             this.btnreset.OnHoverBaseColor = System.Drawing.Color.DarkGray;
             this.btnreset.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -370,7 +338,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = null;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(920, 522);
+            this.btnAdd.Location = new System.Drawing.Point(918, 527);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.DarkGray;
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -388,7 +356,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(926, 351);
+            this.label9.Location = new System.Drawing.Point(927, 336);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 18);
@@ -399,7 +367,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(927, 233);
+            this.label8.Location = new System.Drawing.Point(927, 226);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 18);
@@ -410,7 +378,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(404, 348);
+            this.label6.Location = new System.Drawing.Point(405, 333);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 18);
@@ -439,14 +407,6 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Medicine ID";
             // 
-            // txtMediID
-            // 
-            this.txtMediID.ForeColor = System.Drawing.Color.Black;
-            this.txtMediID.Location = new System.Drawing.Point(407, 144);
-            this.txtMediID.Name = "txtMediID";
-            this.txtMediID.Size = new System.Drawing.Size(340, 20);
-            this.txtMediID.TabIndex = 44;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -457,24 +417,6 @@
             this.label4.Size = new System.Drawing.Size(136, 18);
             this.label4.TabIndex = 29;
             this.label4.Text = "Manufacturing Date";
-            // 
-            // txtManuDate
-            // 
-            this.txtManuDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtManuDate.Location = new System.Drawing.Point(408, 491);
-            this.txtManuDate.Name = "txtManuDate";
-            this.txtManuDate.Size = new System.Drawing.Size(341, 20);
-            this.txtManuDate.TabIndex = 35;
-            this.txtManuDate.Value = new System.DateTime(2023, 8, 18, 23, 10, 5, 0);
-            // 
-            // txtExpDate
-            // 
-            this.txtExpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtExpDate.Location = new System.Drawing.Point(929, 153);
-            this.txtExpDate.Name = "txtExpDate";
-            this.txtExpDate.Size = new System.Drawing.Size(341, 20);
-            this.txtExpDate.TabIndex = 46;
-            this.txtExpDate.Value = new System.DateTime(2023, 8, 18, 23, 10, 5, 0);
             // 
             // label7
             // 
@@ -487,21 +429,145 @@
             this.label7.TabIndex = 45;
             this.label7.Text = "Expire Date";
             // 
+            // txtMediID
+            // 
+            this.txtMediID.BaseColor = System.Drawing.Color.White;
+            this.txtMediID.BorderColor = System.Drawing.Color.Silver;
+            this.txtMediID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMediID.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtMediID.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtMediID.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtMediID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMediID.Location = new System.Drawing.Point(407, 144);
+            this.txtMediID.Name = "txtMediID";
+            this.txtMediID.PasswordChar = '\0';
+            this.txtMediID.SelectedText = "";
+            this.txtMediID.Size = new System.Drawing.Size(340, 30);
+            this.txtMediID.TabIndex = 47;
+            // 
+            // txtMediName
+            // 
+            this.txtMediName.BaseColor = System.Drawing.Color.White;
+            this.txtMediName.BorderColor = System.Drawing.Color.Silver;
+            this.txtMediName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMediName.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtMediName.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtMediName.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtMediName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMediName.Location = new System.Drawing.Point(407, 255);
+            this.txtMediName.Name = "txtMediName";
+            this.txtMediName.PasswordChar = '\0';
+            this.txtMediName.SelectedText = "";
+            this.txtMediName.Size = new System.Drawing.Size(340, 30);
+            this.txtMediName.TabIndex = 48;
+            // 
+            // txtMediNumber
+            // 
+            this.txtMediNumber.BaseColor = System.Drawing.Color.White;
+            this.txtMediNumber.BorderColor = System.Drawing.Color.Silver;
+            this.txtMediNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMediNumber.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtMediNumber.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtMediNumber.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtMediNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMediNumber.Location = new System.Drawing.Point(408, 370);
+            this.txtMediNumber.Name = "txtMediNumber";
+            this.txtMediNumber.PasswordChar = '\0';
+            this.txtMediNumber.SelectedText = "";
+            this.txtMediNumber.Size = new System.Drawing.Size(340, 30);
+            this.txtMediNumber.TabIndex = 49;
+            // 
+            // txtManuDate
+            // 
+            this.txtManuDate.BaseColor = System.Drawing.Color.White;
+            this.txtManuDate.BorderColor = System.Drawing.Color.Silver;
+            this.txtManuDate.CustomFormat = null;
+            this.txtManuDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.txtManuDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtManuDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtManuDate.ForeColor = System.Drawing.Color.Black;
+            this.txtManuDate.Location = new System.Drawing.Point(407, 483);
+            this.txtManuDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtManuDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtManuDate.Name = "txtManuDate";
+            this.txtManuDate.OnHoverBaseColor = System.Drawing.Color.White;
+            this.txtManuDate.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtManuDate.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtManuDate.OnPressedColor = System.Drawing.Color.Black;
+            this.txtManuDate.Size = new System.Drawing.Size(340, 30);
+            this.txtManuDate.TabIndex = 50;
+            this.txtManuDate.Text = "Friday, September 1, 2023";
+            this.txtManuDate.Value = new System.DateTime(2023, 9, 1, 21, 48, 52, 619);
+            // 
+            // txtExpDate
+            // 
+            this.txtExpDate.BaseColor = System.Drawing.Color.White;
+            this.txtExpDate.BorderColor = System.Drawing.Color.Silver;
+            this.txtExpDate.CustomFormat = null;
+            this.txtExpDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.txtExpDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtExpDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtExpDate.ForeColor = System.Drawing.Color.Black;
+            this.txtExpDate.Location = new System.Drawing.Point(930, 144);
+            this.txtExpDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtExpDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtExpDate.Name = "txtExpDate";
+            this.txtExpDate.OnHoverBaseColor = System.Drawing.Color.White;
+            this.txtExpDate.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtExpDate.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtExpDate.OnPressedColor = System.Drawing.Color.Black;
+            this.txtExpDate.Size = new System.Drawing.Size(320, 30);
+            this.txtExpDate.TabIndex = 51;
+            this.txtExpDate.Text = "Friday, September 1, 2023";
+            this.txtExpDate.Value = new System.DateTime(2023, 9, 1, 21, 49, 43, 929);
+            // 
+            // txtQty
+            // 
+            this.txtQty.BaseColor = System.Drawing.Color.White;
+            this.txtQty.BorderColor = System.Drawing.Color.Silver;
+            this.txtQty.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQty.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtQty.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtQty.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtQty.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtQty.Location = new System.Drawing.Point(929, 255);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.PasswordChar = '\0';
+            this.txtQty.SelectedText = "";
+            this.txtQty.Size = new System.Drawing.Size(340, 30);
+            this.txtQty.TabIndex = 52;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BaseColor = System.Drawing.Color.White;
+            this.txtPrice.BorderColor = System.Drawing.Color.Silver;
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPrice.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtPrice.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPrice.Location = new System.Drawing.Point(930, 370);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PasswordChar = '\0';
+            this.txtPrice.SelectedText = "";
+            this.txtPrice.Size = new System.Drawing.Size(340, 30);
+            this.txtPrice.TabIndex = 53;
+            // 
             // AddMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1364, 721);
-            this.Controls.Add(this.txtExpDate);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtMediID);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtQty);
+            this.Controls.Add(this.txtExpDate);
+            this.Controls.Add(this.txtManuDate);
             this.Controls.Add(this.txtMediNumber);
             this.Controls.Add(this.txtMediName);
+            this.Controls.Add(this.txtMediID);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtManuDate);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
@@ -538,10 +604,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtQty;
-        private System.Windows.Forms.TextBox txtMediNumber;
-        private System.Windows.Forms.TextBox txtMediName;
         private Guna.UI.WinForms.GunaButton btnreset;
         private Guna.UI.WinForms.GunaButton btnAdd;
         private System.Windows.Forms.Label label9;
@@ -549,10 +611,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMediID;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker txtManuDate;
-        private System.Windows.Forms.DateTimePicker txtExpDate;
         private System.Windows.Forms.Label label7;
+        private Guna.UI.WinForms.GunaTextBox txtMediID;
+        private Guna.UI.WinForms.GunaTextBox txtMediName;
+        private Guna.UI.WinForms.GunaTextBox txtMediNumber;
+        private Guna.UI.WinForms.GunaDateTimePicker txtManuDate;
+        private Guna.UI.WinForms.GunaDateTimePicker txtExpDate;
+        private Guna.UI.WinForms.GunaTextBox txtQty;
+        private Guna.UI.WinForms.GunaTextBox txtPrice;
     }
 }
