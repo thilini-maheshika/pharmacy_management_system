@@ -57,16 +57,16 @@
             this.txtTotPrice = new Guna.UI.WinForms.GunaTextBox();
             this.txtExpDate = new Guna.UI.WinForms.GunaDateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemove = new Guna.UI.WinForms.GunaButton();
             this.btnPurchase = new Guna.UI.WinForms.GunaButton();
             this.price_label = new Guna.UI.WinForms.GunaTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -562,6 +562,36 @@
             this.dataGridView1.TabIndex = 92;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Medicine ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Expire Date";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Price Per Unit";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "No of Units";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Total Price";
+            this.Column6.Name = "Column6";
+            // 
             // btnRemove
             // 
             this.btnRemove.AnimationHoverSpeed = 0.07F;
@@ -612,7 +642,7 @@
             this.btnPurchase.Radius = 19;
             this.btnPurchase.Size = new System.Drawing.Size(160, 42);
             this.btnPurchase.TabIndex = 94;
-            this.btnPurchase.Text = "Purchase ";
+            this.btnPurchase.Text = "Purchase & Print";
             this.btnPurchase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
@@ -647,36 +677,6 @@
             this.pictureBox1.TabIndex = 96;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Total Price";
-            this.Column6.Name = "Column6";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "No of Units";
-            this.Column5.Name = "Column5";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Price Per Unit";
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Expire Date";
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Medicine ID";
-            this.Column1.Name = "Column1";
             // 
             // SellMedicine
             // 
