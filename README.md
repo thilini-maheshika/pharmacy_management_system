@@ -1,5 +1,5 @@
 # pharmacy_management_system
 
-admin login
-username : admin
-password : admin
+#admin login
+#username : admin
+#password : admin
